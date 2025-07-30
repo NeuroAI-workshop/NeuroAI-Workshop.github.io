@@ -30,7 +30,7 @@ Please note submissions that solely explore ML/AI algorithms without an explicit
 
 **Notification of Acceptance:** October 9, 2024
 
-Submit your papers through our [submission portal](xxx).
+Submit your papers through our [submission portal](https://openreview.net/group?id=NeurIPS.cc/2024/Workshop/NeuroAI#tab-your-consoles).
 
 The top 3 highly scored submissions will be chosen for spotlight talks.
 
