@@ -27,8 +27,8 @@ Want to stay updated on our upcoming webinars?
 </style>--> 
 
 - **Speaker:** Cristina Savin, Assistant Professor, New York University  
-  **Title:** *TBA*  
-  **Date:** 7th August 2025  
+  **Title:** *Representing beliefs in a changing world*  
+  **Date:** 21st August 2025  <span style="color: red;">(Rescheduled)</span>  
   **Time:**  9 AM EDT / 2 PM BST   
   **Register Here:**  [Register for free](https://docs.google.com/forms/d/e/1FAIpQLSds3VRDTUKdkKd3g6dXHHvXZsWHzfCM-TenM7AwUzYmHWEg7A/viewform)   
   **Webinar Link:**  [Join the webinar](https://monash.zoom.us/j/82951066486?pwd=lMUL2Whj4jV11sQ9fs2lwMmO2R8F3w.1)    
@@ -44,4 +44,5 @@ Want to stay updated on our upcoming webinars?
   **Title:** *Computational Inductive Biases of Spatiotemporal Artificial Neural Networks*  
   **Time:**  9 AM EDT / 2 PM BST - 8th May 2025   
   **Recording:** [Youtube Channel](https://youtu.be/nmiGZo5uPH4) 
+
 
