@@ -39,7 +39,7 @@ Want to stay updated on our upcoming webinars?
 
 - **Speaker:** Cristina Savin, Assistant Professor, New York University   
   **Title:** *Representing Beliefs in A Changing World*  
-  **Time:** 9 AM EDT / 2 PM BST - 7th August 2025    
+  **Time:** 9 AM EDT / 2 PM BST - 21st August 2025    
   **Recording:** [Youtube Channel](https://youtu.be/z8Nv6pRBwu4)
 
 - **Speaker:** Andy Keller, Research Fellow, Kempner Institute at Harvard University  
@@ -51,6 +51,7 @@ Want to stay updated on our upcoming webinars?
   **Title:** *Why NeuroAI Needs NeuroAgents*  
   **Time:** 5 PM EST / 9 PM GMT - 3rd April 2025     
   **Recording:** [Youtube Channel](https://youtu.be/9_7mQu5NEfs)
+
 
 
 
