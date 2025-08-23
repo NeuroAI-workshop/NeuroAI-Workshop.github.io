@@ -12,7 +12,7 @@ Want to stay updated on our upcoming webinars?
 
 
 ## Upcoming Webinars 
-<!--!<p><strong>Watch this space</strong><span class="dots"></span></p>
+<p><strong>Watch this space</strong><span class="dots"></span></p>
 
 <style>
 @keyframes blink {
@@ -24,17 +24,19 @@ Want to stay updated on our upcoming webinars?
   content: ' ...';
   animation: blink 1s infinite steps(1, start);
 }
-</style>--> 
+</style>
 
+<!--
 - **Speaker:** Cristina Savin, Assistant Professor, New York University  
-  **Title:** *Representing beliefs in a changing world*  
-  **Date:** 21st August 2025  <span style="color: red;">(Rescheduled)</span>  
-  **Time:**  9 AM EDT / 2 PM BST   
-  **Register Here:**  [Register for free](https://docs.google.com/forms/d/e/1FAIpQLSds3VRDTUKdkKd3g6dXHHvXZsWHzfCM-TenM7AwUzYmHWEg7A/viewform)   
-  **Webinar Link:**  [Join the webinar](https://monash.zoom.us/j/82951066486?pwd=lMUL2Whj4jV11sQ9fs2lwMmO2R8F3w.1)    
-
+- **Title:** *TBA*  
+- **Date:** 7th August 2025  
+- **Time:** 9 AM EDT / 2 PM BST  
+- **Register Here:** [Register for free](https://docs.google.com/forms/d/e/1FAIpQLSds3VRDTUKdkKd3g6dXHHvXZsWHzfCM-TenM7AwUzYmHWEg7A/viewform)  
+- **Webinar Link:** [Join the webinar](https://monash.zoom.us/j/82951066486?pwd=lMUL2Whj4jV11sQ9fs2lwMmO2R8F3w.1)  
+-->
 
 ## Past Webinars  
+
 - **Speaker:** Aran Nayebi, Assistant Professor, Carnegie Mellon University  
   **Title:** *Why NeuroAI Needs NeuroAgents*  
   **Time:** 5 PM EST / 9 PM GMT - 3rd April 2025     
@@ -43,6 +45,14 @@ Want to stay updated on our upcoming webinars?
 - **Speaker:** Andy Keller, Research Fellow, Kempner Institute at Harvard University  
   **Title:** *Computational Inductive Biases of Spatiotemporal Artificial Neural Networks*  
   **Time:**  9 AM EDT / 2 PM BST - 8th May 2025   
-  **Recording:** [Youtube Channel](https://youtu.be/nmiGZo5uPH4) 
+  **Recording:** [Youtube Channel](https://youtu.be/nmiGZo5uPH4)
+
+- **Speaker:** Cristina Savin, Assistant Professor, New York University   
+  **Title:** *Representing Beliefs in A Changing World*  
+  **Time:** 9 AM EDT / 2 PM BST - 7th August 2025    
+  **Recording:** [Youtube Channel](https://youtu.be/z8Nv6pRBwu4)
+
+
+
 
 
