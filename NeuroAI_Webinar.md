@@ -37,20 +37,24 @@ Want to stay updated on our upcoming webinars?
 
 ## Past Webinars  
 
-- **Speaker:** Aran Nayebi, Assistant Professor, Carnegie Mellon University  
-  **Title:** *Why NeuroAI Needs NeuroAgents*  
-  **Time:** 5 PM EST / 9 PM GMT - 3rd April 2025     
-  **Recording:** [Youtube Channel](https://youtu.be/9_7mQu5NEfs)
+- **Speaker:** Cristina Savin, Assistant Professor, New York University   
+  **Title:** *Representing Beliefs in A Changing World*  
+  **Time:** 9 AM EDT / 2 PM BST - 7th August 2025    
+  **Recording:** [Youtube Channel](https://youtu.be/z8Nv6pRBwu4)
 
 - **Speaker:** Andy Keller, Research Fellow, Kempner Institute at Harvard University  
   **Title:** *Computational Inductive Biases of Spatiotemporal Artificial Neural Networks*  
   **Time:**  9 AM EDT / 2 PM BST - 8th May 2025   
   **Recording:** [Youtube Channel](https://youtu.be/nmiGZo5uPH4)
 
-- **Speaker:** Cristina Savin, Assistant Professor, New York University   
-  **Title:** *Representing Beliefs in A Changing World*  
-  **Time:** 9 AM EDT / 2 PM BST - 7th August 2025    
-  **Recording:** [Youtube Channel](https://youtu.be/z8Nv6pRBwu4)
+- **Speaker:** Aran Nayebi, Assistant Professor, Carnegie Mellon University  
+  **Title:** *Why NeuroAI Needs NeuroAgents*  
+  **Time:** 5 PM EST / 9 PM GMT - 3rd April 2025     
+  **Recording:** [Youtube Channel](https://youtu.be/9_7mQu5NEfs)
+
+
+
+
 
 
 
