@@ -15,6 +15,8 @@ Despite remarkable advances in capability, foundation models such as LLMs and VL
 
 This workshop will serve as a forum for researchers and practitioners to discuss definitions, metrics, and methods for reliability quantification, explore principled evaluation frameworks, and propose strategies to enhance robustness and trustworthiness across language and vision tasks. By bridging the LLM and VLM communities, we aim to foster cross-domain insights, stimulate the creation of realistic stress-test datasets, and encourage approaches that ensure dependable performance in operational settings.
 
+OpenReview submission: https://openreview.net/group?id=AAAI.org/2026/Workshop/AIR-FM 
+
 
 ### Topic of Interest: 
 
