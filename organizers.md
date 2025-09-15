@@ -4,7 +4,7 @@ title: "Organizers"
 permalink: /organizers/
 ---
 
-The workshop is organised by a core team of three early career researchers and supported by three senior academics who serve as advisors.
+The workshop is organised by a core team of nine early career researchers and supported by seven senior academics who serve as advisors.
 
 <div class="section-title">Organizers</div>
 
