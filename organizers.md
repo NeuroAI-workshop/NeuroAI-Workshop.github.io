@@ -10,6 +10,22 @@ The workshop is organised by a core team of three early career researchers and s
 
 <div class="person-grid">
   <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/weiliu.jpg" alt="Shashank Agnihotri">
+    <div class="name">
+      <a href="https://Weiliu876.github.io/">Shashank Agnihotri</a>
+    </div>
+    <div class="affiliation">University of Mannheim</div>
+  </div>
+
+<div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/weiliu.jpg" alt="Wei Liu">
+    <div class="name">
+      <a href="https://Weiliu876.github.io/">Wei Liu</a>
+    </div>
+    <div class="affiliation">NUS</div>
+  </div>
+  
+  <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/desi.jpg" alt="Desi R. Ivanova">
     <div class="name">
       <a href="https://desirivanova.com/">Desi R. Ivanova</a>
