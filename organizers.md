@@ -10,14 +10,6 @@ The workshop is organised by a core team of three early career researchers and s
 
 <div class="person-grid">
   <div class="person-card">
-    <img src="{{ site.baseurl }}/images/organizers/desi.jpg" alt="Desi R. Ivanova">
-    <div class="name">
-      <a href="https://desirivanova.com/">Desi R. Ivanova</a>
-    </div>
-    <div class="affiliation">Oxford</div>
-  </div>
-  
-  <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/sha.jpg" alt="Shashank Agnihotri">
     <div class="name">
       <a href="https://www.uni-mannheim.de/dws/people/researchers/phd-students/shashank/">Shashank Agnihotri</a>
