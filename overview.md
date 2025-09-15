@@ -7,22 +7,39 @@ body_class: with-background
 
 <!-- # Overview -->
 
-Welcome to the AAAI 2026 Workshop! Large Language Models (LLMs) have demonstrated remarkable _capabilities_ across a range of natural‑language and multi-modal tasks, including understanding, generation, and reasoning.
-However, raw capability alone is not sufficient for real-world deployment.
-The key barrier to adoption, particularly in  high‑risk domains such as healthcare, education or law, is _reliability_.This workshop will bring together researchers and practitioners to explore existing and emerging **quantitative approaches for defining, evaluating, and improving LLM reliability**.
-The goal is to sharpen our understanding of what reliability means for LLMs and to develop practical tools and benchmarks to enable confident deployment at scale.
+Welcome to the AAAI 2026 Workshop! Despite remarkable advances in capability, foundation models such as LLMs and VLMs face fundamental challenges in maintaining reliability under real-world conditions. Their stochastic nature and sensitivity to context make them vulnerable to distribution shifts, sensor noise, hallucinations, overconfidence, and prompt variability. These issues limit safe deployment in critical domains like healthcare, law, robotics, and autonomous driving.
 
-#### Key issues and questions:
-
-1. **Defining and measuring reliability in LLM contexts**. How should reliability be conceptualised for stochastic, learned systems? What metrics and evaluation frameworks are most appropriate for capturing different aspects of unreliable behaviour?
-1. **Identifying and quantifying sources of unreliability**. These include (but are not limited to) hallucinations, overconfidence, prompt sensitivity, poor calibration, and brittleness to domain or distribution shift. How can we systematically characterise and measure failure modes?
-
-1. **{Detecting or predicting unreliable behaviour**. What methods can identify when an LLM is likely to fail or produce unreliable outputs? For example, methods for uncertainty estimation and calibration, failure detection and prediction, and so on.
-1. **Reliability focused training and alignment**. Can we design training objectives, fine-tuning methods, or alignment (post-training) techniques to encourage reliability? Is there a trade-off between capabilities and reliability?
-1. **Practical deployment considerations**. How can reliability signals be integrated into decision-making systems? What are the human factors and UX considerations for communicating (un)reliability to end users?
-1. **Benchmarking and evaluation**. How should reliability be measured and evaluated in practice? What are the limitations of current benchmarks, and how can we develop more robust evaluation frameworks?
+This workshop will serve as a forum for researchers and practitioners to discuss definitions, metrics, and methods for reliability quantification, explore principled evaluation frameworks, and propose strategies to enhance robustness and trustworthiness across language and vision tasks. By bridging the LLM and VLM communities, we aim to foster cross-domain insights, stimulate the creation of realistic stress-test datasets, and encourage approaches that ensure dependable performance in operational settings.
 
 
-For further information and should you have any inquiries, please contact: desi.ivanova@stats.ox.ac.uk, weiliumg@gmail.com, hvishwakarma@cs.wisc.edu.
+
+### Topic of Interest: 
+
+
+We welcome original contributions from probabilistic machine learning, statistics, engineering, NLP, HCI, and related fields. Submissions may address (but are not limited to) the following topics:
+
+- **Failure Mode Analysis**: Characterising unreliability in LLMs and VLMs under real-world conditions, including domain shifts, adversarial inputs, and sensor degradations.
+
+
+- **Reliability-Centered Datasets**: Designing datasets to expose vulnerabilities, long-tail phenomena, or multi-modal inconsistencies.
+
+
+- **Metrics and Evaluation Frameworks**: Developing measures that capture robustness, calibration, and generalization beyond accuracy or average precision.
+
+
+- **Reliability-Aware Architectures and Training**: Model designs and learning paradigms that explicitly target dependable performance in realistic scenarios.
+
+
+- **Uncertainty Estimation and Detection**: Predicting, detecting, and mitigating unreliable outputs before deployment.
+
+
+- **Security, Hallucination, and Prompt Sensitivity**: Red-teaming, jailbreak detection, and methods to reduce context-driven unreliability.
+
+
+- **Cross-Domain Reliability Insights**: Lessons and techniques transferable between language-only, vision-only, and multi-modal systems.
+
+
+
+For further information and should you have any inquiries, please contact: air-fm@googlegroups.com.
 
 
