@@ -104,6 +104,14 @@ The workshop is organised by a core team of three early career researchers and s
     </div>
     <div class="affiliation">UW Madison</div>
   </div>
+
+  <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/harit.jpg" alt="Harit Vishwakarma">
+    <div class="name">
+      <a href="https://harit7.github.io/">Harit Vishwakarma</a>
+    </div>
+    <div class="affiliation">UW Madison</div>
+  </div>
   
   <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/francesco.jpeg" alt="Francesco Croce">
