@@ -28,6 +28,29 @@ permalink: /speakers/
       <a href="https://krdc.web.illinois.edu/">Katie Driggs-Campbell</a>
     </div>
     <div class="affiliation">UIUC</div>
+    
+    <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/krdc.jpg" alt="Katie Driggs-Campbell">
+    <div class="name">
+      <a href="https://krdc.web.illinois.edu/">Katie Driggs-Campbell</a>
+    </div>
+    <div class="affiliation">UIUC</div>
+
+    <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/bart1.jpg" alt="Bart van der Sloot">
+    <div class="name">
+      <a href="https://bartvandersloot.com/about/">Bart van der Sloot</a>
+    </div>
+    <div class="affiliation">University of Tilburg</div>
+
+    <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/dawn1.jpg" alt="Dawn Song">
+    <div class="name">
+      <a href="https://dawnsong.io/">Dawn Song</a>
+    </div>
+    <div class="affiliation">UC Berkeley</div>
+
+    
   </div>
 
 
