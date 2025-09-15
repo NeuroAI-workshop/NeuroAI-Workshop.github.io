@@ -84,6 +84,7 @@ The workshop is organised by a core team of three early career researchers and s
     </div>
     <div class="affiliation">University of Stuttgart</div>
   </div>
+  </div>
 
 
 <div class="section-title">Advisors</div>
