@@ -78,7 +78,7 @@ The workshop is organised by a core team of three early career researchers and s
 
 
 <div class="person-card">
-    <img src="{{ site.baseurl }}/images/organizers/schmalfuss_Jenny.jpg" alt="Jenny Schmalfuss">
+    <img src="{{ site.baseurl }}/images/organizers/schmalfuss_Jenny.png" alt="Jenny Schmalfuss">
     <div class="name">
       <a href="https://www.vis.uni-stuttgart.de/en/team/Schmalfuss/">Jenny Schmalfuss</a>
     </div>
