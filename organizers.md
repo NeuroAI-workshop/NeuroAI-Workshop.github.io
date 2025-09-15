@@ -6,31 +6,31 @@ permalink: /organizers/
 
 The workshop is organised by a core team of three early career researchers and supported by three senior academics who serve as advisors.
 
-<div class="section-title">Organizers (listed alphabetically)</div>
+<div class="section-title">Organizers</div>
 
 <div class="person-grid">
   <div class="person-card">
-    <img src="{{ site.baseurl }}/images/organizers/weiliu.jpg" alt="Shashank Agnihotri">
+    <img src="{{ site.baseurl }}/images/organizers/_MA_2369_web.jpg" alt="Shashank Agnihotri">
     <div class="name">
-      <a href="https://Weiliu876.github.io/">Shashank Agnihotri</a>
+      <a href="https://www.uni-mannheim.de/dws/people/researchers/phd-students/shashank/">Shashank Agnihotri</a>
     </div>
     <div class="affiliation">University of Mannheim</div>
   </div>
 
-<div class="person-card">
-    <img src="{{ site.baseurl }}/images/organizers/weiliu.jpg" alt="Wei Liu">
-    <div class="name">
-      <a href="https://Weiliu876.github.io/">Wei Liu</a>
-    </div>
-    <div class="affiliation">NUS</div>
-  </div>
-  
   <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/desi.jpg" alt="Desi R. Ivanova">
     <div class="name">
       <a href="https://desirivanova.com/">Desi R. Ivanova</a>
     </div>
     <div class="affiliation">Oxford</div>
+  </div>
+
+  <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/julia.jpg" alt="Julia Grabinski">
+    <div class="name">
+      <a href="https://gejulia.github.io/">Julia Grabinski</a>
+    </div>
+    <div class="affiliation">University of Darmstadt</div>
   </div>
 
   <div class="person-card">
@@ -50,9 +50,61 @@ The workshop is organised by a core team of three early career researchers and s
   </div>
 </div>
 
-<div class="section-title">Advisors (listed alphabetically)</div>
+<div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/jindong.jpg" alt="Jindong Gu">
+    <div class="name">
+      <a href="https://jindonggu.github.io/">Jindong Gu</a>
+    </div>
+    <div class="affiliation">DeepMind</div>
+  </div>
+</div>
+
+<div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/Vikash_Sehwag.jpg" alt="Vikash Sehwag">
+    <div class="name">
+      <a href="https://vsehwag.github.io/">Vikash Sehwag</a>
+    </div>
+    <div class="affiliation">DeepMind</div>
+  </div>
+</div>
+
+<div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/Abhipsa_Basu.jpg" alt="Abhipsa Basu">
+    <div class="name">
+      <a href="https://abhipsabasu.github.io/">Abhipsa Basu</a>
+    </div>
+    <div class="affiliation">Indian Institute of Science</div>
+  </div>
+</div>
+
+<div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/schmalfuss_Jenny.jpg" alt="Jenny Schmalfuss">
+    <div class="name">
+      <a href="https://www.vis.uni-stuttgart.de/en/team/Schmalfuss/">Jenny Schmalfuss</a>
+    </div>
+    <div class="affiliation">University of Stuttgart</div>
+  </div>
+</div>
+
+<div class="section-title">Advisors</div>
 
 <div class="person-grid">
+  <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/francesco.jpeg" alt="Francesco Croce">
+    <div class="name">
+      <a href="https://people.epfl.ch/francesco.croce?lang=en">Francesco Croce</a>
+    </div>
+    <div class="affiliation">EPFL</div>
+  </div>
+
+  <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/sravanti.jpg" alt="Sravanti Addepalli">
+    <div class="name">
+      <a href="https://www.linkedin.com/in/sravanti-addepalli/?originalSubdomain=in">Sravanti Addepalli</a>
+    </div>
+    <div class="affiliation">DeepMind</div>
+  </div>
+  
   <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/leews.jpg" alt="Wee Sun Lee">
     <div class="name">
@@ -70,10 +122,26 @@ The workshop is organised by a core team of three early career researchers and s
   </div>
 
   <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/rvbabu.jpg" alt="R. Venkatesh Babu">
+    <div class="name">
+      <a href="https://cds.iisc.ac.in/faculty/venky/">R. Venkatesh Babu</a>
+    </div>
+    <div class="affiliation">Indian Institute of Science</div>
+  </div>
+
+  <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/yee.jpg" alt="Yee Whye Teh">
     <div class="name">
       <a href="https://www.stats.ox.ac.uk/~teh/">Yee Whye Teh</a>
     </div>
     <div class="affiliation">Oxford</div>
+  </div>
+
+  <div class="person-card">
+    <img src="{{ site.baseurl }}/images/organizers/margret.jpg" alt="Ing Margret Keuper">
+    <div class="name">
+      <a href="https://www.uni-mannheim.de/dws/people/professors/prof-dr-ing-margret-keuper/">Ing Margret Keuper</a>
+    </div>
+    <div class="affiliation">University of Mannheim & MPI</div>
   </div>
 </div>
