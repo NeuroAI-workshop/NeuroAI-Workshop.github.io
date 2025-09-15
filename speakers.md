@@ -29,14 +29,6 @@ permalink: /speakers/
     </div>
     <div class="affiliation">UIUC</div>
     </div>
-    
-  <div class="person-card">
-    <img src="{{ site.baseurl }}/images/organizers/krdc.jpg" alt="Katie Driggs-Campbell">
-    <div class="name">
-      <a href="https://krdc.web.illinois.edu/">Katie Driggs-Campbell</a>
-    </div>
-    <div class="affiliation">UIUC</div>
-    </div>
 
   <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/bart1.jpg" alt="Bart van der Sloot">
