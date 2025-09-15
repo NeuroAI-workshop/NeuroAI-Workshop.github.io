@@ -1,6 +1,5 @@
 # Site settings
-title: "1st Reliability Quantification for LLMs Workshop @AAAI: Quantifying Reliability in Language Models"
-description: "Under Review"
+title: "AIR-FM: Assessing and Improving Reliability of Foundation Models in the Real World Workshop@AAAI 2026"
 url: "https://llmrel.github.io"
 baseurl: "" # the subpath of your site, e.g. /blog
 
