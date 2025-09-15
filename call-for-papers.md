@@ -11,62 +11,66 @@ permalink: /call-for-papers/
 ### Overview and Scope: 
 
 
-Large Language Models (LLMs) such as GPT-4, Claude, and Gemini have demonstrated remarkable capabilities across a wide range of natural language processing tasks. However, as these models are increasingly integrated into high-stakes applications—such as healthcare, law, education, and scientific research—their reliability and trustworthiness have become critical concerns.
+Despite remarkable advances in capability, foundation models such as LLMs and VLMs face fundamental challenges in maintaining reliability under real-world conditions. Their stochastic nature and sensitivity to context make them vulnerable to distribution shifts, sensor noise, hallucinations, overconfidence, and prompt variability. These issues limit safe deployment in critical domains like healthcare, law, robotics, and autonomous driving.
 
-Uncertainty quantification (UQ) is an essential component in building reliable AI systems. Understanding and representing what a model "does not know" is key to ensuring robust decision-making, improving model calibration, mitigating hallucinations, and enabling human-AI collaboration.
+This workshop will serve as a forum for researchers and practitioners to discuss definitions, metrics, and methods for reliability quantification, explore principled evaluation frameworks, and propose strategies to enhance robustness and trustworthiness across language and vision tasks. By bridging the LLM and VLM communities, we aim to foster cross-domain insights, stimulate the creation of realistic stress-test datasets, and encourage approaches that ensure dependable performance in operational settings.
 
-This workshop aims to bring together researchers and practitioners from academia and industry to discuss recent advances, challenges, and future directions related to uncertainty estimation and reliability in LLMs. We encourage interdisciplinary submissions from the machine learning, NLP, AI safety, and HCI communities.
 
 ### Topic of Interest: 
 
 
 We welcome original contributions from probabilistic machine learning, statistics, engineering, NLP, HCI, and related fields. Submissions may address (but are not limited to) the following topics:
 
+- **Failure Mode Analysis**: Characterising unreliability in LLMs and VLMs under real-world conditions, including domain shifts, adversarial inputs, and sensor degradations.
 
-- **Defining and measuring reliability in LLM contexts.** How should reliability be conceptualised for stochastic, learned systems? What metrics and evaluation frameworks are most appropriate for capturing different aspects of unreliable behaviour?
 
-- **Identifying and quantifying sources of unreliability.** These include (but are not limited to) hallucinations, overconfidence, prompt sensitivity, poor calibration, and brittleness to domain or distribution shift. How can we systematically characterise and measure failure modes?
+- **Reliability-Centered Datasets**: Designing datasets to expose vulnerabilities, long-tail phenomena, or multi-modal inconsistencies.
 
-- **Detecting or predicting unreliable behaviour.** What methods can identify when an LLM is likely to fail or produce unreliable outputs? For example, methods for uncertainty estimation and calibration, failure detection and prediction, and so on.
-- **Reliability focused training and alignment.** Can we design training objectives, fine-tuning methods, or alignment (post-training) techniques to encourage reliability? Is there a trade-off between capabilities and reliability?
 
-- **Practical deployment considerations.** How can reliability signals be integrated into decision-making systems? What are the human factors and UX considerations for communicating (un)reliability to end users?
+- **Metrics and Evaluation Frameworks**: Developing measures that capture robustness, calibration, and generalization beyond accuracy or average precision.
 
-- **Benchmarking and evaluation.** How should reliability be measured and evaluated in practice? What are the limitations of current benchmarks, and how can we develop more robust evaluation frameworks?
+
+- **Reliability-Aware Architectures and Training**: Model designs and learning paradigms that explicitly target dependable performance in realistic scenarios.
+
+
+- **Uncertainty Estimation and Detection**: Predicting, detecting, and mitigating unreliable outputs before deployment.
+
+
+- **Security, Hallucination, and Prompt Sensitivity**: Red-teaming, jailbreak detection, and methods to reduce context-driven unreliability.
+
+
+- **Cross-Domain Reliability Insights**: Lessons and techniques transferable between language-only, vision-only, and multi-modal systems.
+
+
+
 
 
 ### Submission Details: 
 
 
-We invite submissions of the following types:
+All submissions are to be made in the AAAI 2026 Format.
 
-- **Full Papers** (4–8 pages, excluding references): Novel research contributions with empirical or theoretical insights.
+Please follow the author guidelines set by AAAI 2026.
 
-- **Extended Abstracts** (2 pages): Work-in-progress, preliminary results, or visionary ideas.
+We are accepting submissions in the following three tracks:  
+1. Archival Track: 8 pages, accepted papers hosted on OpenReview
+1. Non-archival Track: 2-8 pages (usually 4 pages), this is an extended abstract.
+1. Tutorials Track: a 4-page description of the intended tutorial, with a good motivation, plan of action, and tutorial content.
+   
+The archival and non-archival track submissions are double-blind.
 
-- **Demo Proposals** (2 pages): Interactive tools or systems demonstrating uncertainty-aware LLM applications. Description of interactive tools or applications related to LLM reliability or uncertainty. 
-    The submission must include a link to the codebase that implements the tool/application or, if hosted online, a link to the live system.
+The tutorial submissions are single-blind.
 
-Please submit your contributions via OpenReview. All submissions should be anonymous and formatted using the AAAI 2026 author kit. 
-We welcome submissions of original, unpublished material, as well as work that is currently under review or published within the past six months.
-
-**Accepted papers**.  The workshop is non-archival, however, the accepted papers will be made public via OpenReview.
-All accepted papers will be presented as posters and the top contributions will also be presented as spoltlight presentations. 
-The workshop will be non-archival, and authors are free to submit their work to other venues.
-
-**Reviewing**. Authors should nominate at least one person to review submissions, with an expected reviewing load of at most 3 papers.
-
-**LLM use policy**. In the preparation of manuscripts, the use of LLMs is only allowed as a general-purpose writing assist tool.
 
 ### Important Dates (Tentative):
 
-- **Submission Deadline**: October 15, 2025
+- **Submission Deadline**: October 15, 2025  
 - **Notification of Acceptance**: November 5, 2025   
 - **Camera-Ready Deadline**: December 10, 2025
-- **Workshop Date**: January [TBD -- 26 or 27], 2026.
+- **Workshop Date**: Monday, January 26, 2026.
 
 
-For questions or inquiries, please contact us at: desi.ivanova@stats.ox.ac.uk, weiliumg@gmail.com, hvishwakarma@cs.wisc.edu .
+For questions or inquiries, please contact us at: air-fm@googlegroups.com
 
 
 
