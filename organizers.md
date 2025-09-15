@@ -48,7 +48,7 @@ The workshop is organised by a core team of three early career researchers and s
     </div>
     <div class="affiliation">UW Madison</div>
   </div>
-</div>
+
 
 <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/jindong.jpg" alt="Jindong Gu">
@@ -57,7 +57,7 @@ The workshop is organised by a core team of three early career researchers and s
     </div>
     <div class="affiliation">DeepMind</div>
   </div>
-</div>
+
 
 <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/Vikash_Sehwag.jpg" alt="Vikash Sehwag">
@@ -66,7 +66,7 @@ The workshop is organised by a core team of three early career researchers and s
     </div>
     <div class="affiliation">DeepMind</div>
   </div>
-</div>
+
 
 <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/Abhipsa_Basu.jpg" alt="Abhipsa Basu">
@@ -75,7 +75,7 @@ The workshop is organised by a core team of three early career researchers and s
     </div>
     <div class="affiliation">Indian Institute of Science</div>
   </div>
-</div>
+
 
 <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/schmalfuss_Jenny.jpg" alt="Jenny Schmalfuss">
@@ -84,7 +84,7 @@ The workshop is organised by a core team of three early career researchers and s
     </div>
     <div class="affiliation">University of Stuttgart</div>
   </div>
-</div>
+
 
 <div class="section-title">Advisors</div>
 
