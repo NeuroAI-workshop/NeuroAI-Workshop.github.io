@@ -10,7 +10,7 @@ The workshop is organised by a core team of three early career researchers and s
 
 <div class="person-grid">
   <div class="person-card">
-    <img src="{{ site.baseurl }}/images/organizers/_MA_2369_web.jpg" alt="Shashank Agnihotri">
+    <img src="{{ site.baseurl }}/images/organizers/sha.jpg" alt="Shashank Agnihotri">
     <div class="name">
       <a href="https://www.uni-mannheim.de/dws/people/researchers/phd-students/shashank/">Shashank Agnihotri</a>
     </div>
