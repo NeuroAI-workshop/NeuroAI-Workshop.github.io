@@ -59,13 +59,6 @@ The workshop is organised by a core team of nine early career researchers and su
   </div>
 
 
-<div class="person-card">
-    <img src="{{ site.baseurl }}/images/organizers/Vikash_Sehwag.jpg" alt="Vikash Sehwag">
-    <div class="name">
-      <a href="https://vsehwag.github.io/">Vikash Sehwag</a>
-    </div>
-    <div class="affiliation">DeepMind</div>
-  </div>
 
 
 <div class="person-card">
