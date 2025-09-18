@@ -54,14 +54,14 @@ All submissions are to be made in the AAAI 2026 Format.
 
 Please follow the author guidelines set by AAAI 2026.
 
-We are accepting submissions in the following three tracks:  
-1. Archival Track: 8 pages, accepted papers hosted on OpenReview
-1. Non-archival Track: 2-8 pages (usually 4 pages), this is an extended abstract.
-1. Tutorials Track: a 4-page description of the intended tutorial, with a good motivation, plan of action, and tutorial content.
-   
-The archival and non-archival track submissions are double-blind.
+The submissions can be done in the following three tracks:
 
-The tutorial submissions are single-blind.
+Workshop Paper Track: for submitting up to 4-page AAAI format papers of novel work.  
+Nectar Track: for discussing already accepted works at this workshop.  
+Tutorial Track: for discussing demos or tutorials on topics/tools related to the workshop.  
+
+Please select the appropriate track for submission.
+
 
 
 ### Important Dates (Tentative):
