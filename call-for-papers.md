@@ -56,9 +56,9 @@ Please follow the author guidelines set by AAAI 2026.
 
 The submissions can be done in the following three tracks:
 
-Workshop Paper Track: for submitting up to 4-page AAAI format papers of novel work.  
-Nectar Track: for discussing already accepted works at this workshop.  
-Tutorial Track: for discussing demos or tutorials on topics/tools related to the workshop.  
+- Workshop Paper Track: for submitting up to 4-page AAAI format papers of novel work.  
+- Nectar Track: for discussing already accepted works at this workshop.  
+- Tutorial Track: for discussing demos or tutorials on topics/tools related to the workshop.  
 
 Please select the appropriate track for submission.
 
