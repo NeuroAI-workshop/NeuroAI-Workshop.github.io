@@ -134,7 +134,7 @@ The workshop is organised by a core team of nine early career researchers and su
   <div class="person-card">
     <img src="{{ site.baseurl }}/images/organizers/margret.jpg" alt="Ing Margret Keuper">
     <div class="name">
-      <a href="https://www.uni-mannheim.de/dws/people/professors/prof-dr-ing-margret-keuper/">Ing Margret Keuper</a>
+      <a href="https://www.uni-mannheim.de/dws/people/professors/prof-dr-ing-margret-keuper/">Margret Keuper</a>
     </div>
     <div class="affiliation">University of Mannheim & MPI</div>
   </div>
