@@ -12,7 +12,7 @@ Want to stay updated on our upcoming webinars?
 
 
 ## Upcoming Webinars 
-<!--
+
 <p><strong>Watch this space</strong><span class="dots"></span></p>
 
 <style>
@@ -26,17 +26,22 @@ Want to stay updated on our upcoming webinars?
   animation: blink 1s infinite steps(1, start);
 }
 </style>
--->
 
+<!--
 - **Speaker:** Thomas Parr, NIHR Academic Clinical Fellow in Neurology at the Nuffield Department of Clinical Neurosciences, University of Oxford.
 - **Title:** *An anatomy of (active) inference*  
 - **Date:** 10th Oct 2025  
 - **Time:** 7 AM EDT / 12 PM BST  
 - **Register Here:** [Register for free](https://docs.google.com/forms/d/e/1FAIpQLSds3VRDTUKdkKd3g6dXHHvXZsWHzfCM-TenM7AwUzYmHWEg7A/viewform)  
 - **Webinar Link:** [Join the webinar](https://monash.zoom.us/j/82951066486?pwd=lMUL2Whj4jV11sQ9fs2lwMmO2R8F3w.1)  
-
+-->
 
 ## Past Webinars  
+
+- **Speaker:** Thomas Parr, NIHR Academic Clinical Fellow in Neurology at the Nuffield Department of Clinical Neurosciences, University of Oxford.
+  **Title:** *An anatomy of (active) inference*  
+  **Time:** 7 AM EDT / 12 PM BST - 10th Oct 2025     
+  **Recording:** [Youtube Channel](https://youtu.be/bz34roWztqw)
 
 - **Speaker:** Cristina Savin, Assistant Professor, New York University   
   **Title:** *Representing Beliefs in A Changing World*  
@@ -52,6 +57,7 @@ Want to stay updated on our upcoming webinars?
   **Title:** *Why NeuroAI Needs NeuroAgents*  
   **Time:** 5 PM EST / 9 PM GMT - 3rd April 2025     
   **Recording:** [Youtube Channel](https://youtu.be/9_7mQu5NEfs)
+
 
 
 
