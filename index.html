@@ -121,6 +121,25 @@ robots: noindex
       background: rgba(255, 80, 80, 0.28) !important;
       box-shadow: 0 0 14px rgba(255, 80, 80, 0.48);
     }
+
+    /*
+      Mobile-only fix:
+      On phones, the dropdown menu should only show when the hamburger menu
+      has explicitly opened it. This does not affect laptop/desktop.
+    */
+    @media (max-width: 768px) {
+      .navigation-wrapper:not(.visible) {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+
+      .navigation-wrapper.visible {
+        display: flex !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+    }
   </style>
 
   <div class="homepage-sections">
@@ -199,8 +218,8 @@ robots: noindex
 
       /*
         Mobile-only fix:
-        close the dropdown navigation after selecting a tab or scrolling.
-        This does not affect laptop layout.
+        Close the hamburger dropdown after a tab is selected, after scrolling,
+        or after entering/leaving the landing page. Desktop is untouched.
       */
       function closeMobileMenu() {
         if (window.innerWidth > 768) return;
@@ -213,7 +232,7 @@ robots: noindex
           navWrapper.classList.remove("visible");
           navWrapper.classList.remove("animated");
           navWrapper.classList.remove("bounceInDown");
-          navWrapper.style.display = "";
+          navWrapper.removeAttribute("style");
         }
 
         if (menuIcon) {
@@ -223,6 +242,38 @@ robots: noindex
         if (closeIcon) {
           closeIcon.classList.add("hidden");
         }
+      }
+
+      /*
+        When mobile hamburger is tapped, allow the theme to toggle as usual.
+        Then normalize the visible/hidden state so it does not get stuck.
+      */
+      const mobileMenuButton = document.querySelector(".btn-mobile-menu");
+      if (mobileMenuButton) {
+        mobileMenuButton.addEventListener("click", function () {
+          setTimeout(function () {
+            const navWrapper = document.querySelector(".navigation-wrapper");
+            const menuIcon = document.querySelector(".btn-mobile-menu__icon");
+            const closeIcon = document.querySelector(".btn-mobile-close__icon");
+
+            if (window.innerWidth <= 768 && navWrapper) {
+              const shouldBeOpen = closeIcon && !closeIcon.classList.contains("hidden");
+
+              if (shouldBeOpen) {
+                navWrapper.classList.add("visible");
+              } else {
+                navWrapper.classList.remove("visible");
+                navWrapper.classList.remove("animated");
+                navWrapper.classList.remove("bounceInDown");
+                navWrapper.removeAttribute("style");
+
+                if (menuIcon) {
+                  menuIcon.classList.remove("hidden");
+                }
+              }
+            }
+          }, 30);
+        });
       }
 
       function openHomeContent() {
@@ -287,6 +338,7 @@ robots: noindex
         document.body.classList.remove("homepage-transitioning");
 
         clearActiveNav();
+        closeMobileMenu();
 
         if (history.replaceState) {
           history.replaceState(null, null, window.location.pathname);
@@ -467,6 +519,10 @@ robots: noindex
         closeMobileMenu();
       }, { passive: true });
 
+      window.addEventListener("resize", function () {
+        closeMobileMenu();
+      });
+
       window.addEventListener("keydown", function (event) {
         if (
           event.key === "ArrowDown" ||
@@ -475,6 +531,7 @@ robots: noindex
           event.key === "Spacebar"
         ) {
           resetUpwardScrollAccumulator();
+          closeMobileMenu();
           openLandingOnScroll();
         }
 
@@ -563,6 +620,7 @@ robots: noindex
 
       if (window.location.hash) {
         landingOpened = true;
+        closeMobileMenu();
         openHomeContentFast();
 
         const initialId = window.location.hash.replace("#", "");
