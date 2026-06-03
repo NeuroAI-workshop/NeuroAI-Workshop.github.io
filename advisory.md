@@ -20,17 +20,6 @@ We are grateful to our advisory board members for their guidance and support in 
   </div>
 
   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Maryam Shanechi.jpg" alt="Maryam Shanechi" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px; object-fit: cover;">
-    <div style="font-size: 0.9em;">
-      <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://viterbi.usc.edu/directory/faculty/Shanechi/Maryam" style="color: blue;">Maryam Shanechi</a>
-      </strong><br>
-      USC<br>
-      <span style="color: OliveGreen; font-weight: 600;">Confirmed</span>
-    </div>
-  </div>
-
-  <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
     <img src="{{ site.baseurl }}/images/organizers/Doina Precup.jpg" alt="Doina Precup" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px; object-fit: cover;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
@@ -48,6 +37,17 @@ We are grateful to our advisory board members for their guidance and support in 
         <a href="https://www.cshl.edu/research/faculty-staff/anthony-zador/" style="color: blue;">Anthony Zador</a>
       </strong><br>
       Cold Spring Harbor Laboratory<br>
+      <span style="color: OliveGreen; font-weight: 600;">Confirmed</span>
+    </div>
+  </div>
+
+  <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
+    <img src="{{ site.baseurl }}/images/organizers/Maryam Shanechi.jpg" alt="Maryam Shanechi" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px; object-fit: cover;">
+    <div style="font-size: 0.9em;">
+      <strong style="font-size: 1.2em; color: blue;">
+        <a href="https://viterbi.usc.edu/directory/faculty/Shanechi/Maryam" style="color: blue;">Maryam Shanechi</a>
+      </strong><br>
+      USC<br>
       <span style="color: OliveGreen; font-weight: 600;">Confirmed</span>
     </div>
   </div>
