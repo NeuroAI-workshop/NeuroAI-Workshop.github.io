@@ -6,7 +6,7 @@ permalink: /schedules/
 
 <!-- # Schedule -->
 
-<!-- <p>The workshop will be held on Sat 14 Dec, 8:15 a.m. PST in Ballroom B located in the West Building of the Vancouver Convention Center.</p> -->
+<!-- <p>The workshop will be held on Fri(or Sat) 11 (or 12) Dec, 8:15 a.m. PST in Ballroom B located in the West Building of the Vancouver Convention Center.</p> -->
 
 Here you'll find the schedule for the NeuroAI Workshop. Stay tuned for updates on session timings and speaker slots.
 
@@ -22,7 +22,7 @@ Here you'll find the schedule for the NeuroAI Workshop. Stay tuned for updates o
     <td style="border: 1px solid black; padding: 8px;">08:15 – 08:25</td>
     <td style="border: 1px solid black; padding: 8px;">Opening Remarks</td>
     <td style="border: 1px solid black; padding: 8px;">12:15 – 13:25</td>
-    <td style="border: 1px solid black; padding: 8px;">Lunch Break</td>
+    <td style="border: 1px solid black; padding: 8px;">Lunch with Mentors</td>
   </tr>
   <tr>
     <td style="border: 1px solid black; padding: 8px;">08:25 – 09:10</td>
@@ -32,7 +32,7 @@ Here you'll find the schedule for the NeuroAI Workshop. Stay tuned for updates o
   </tr>
   <tr style="background-color: #f2f2f2;">
     <td style="border: 1px solid black; padding: 8px;">09:10 – 09:30</td>
-    <td style="border: 1px solid black; padding: 8px;">Coffee Break</td>
+    <td style="border: 1px solid black; padding: 8px;">Coffee Break & Demos</td>
     <td style="border: 1px solid black; padding: 8px;">15:10 – 15:20</td>
     <td style="border: 1px solid black; padding: 8px;">Intro to NeuroAI Initiatives</td>
   </tr>
@@ -46,6 +46,6 @@ Here you'll find the schedule for the NeuroAI Workshop. Stay tuned for updates o
     <td style="border: 1px solid black; padding: 8px;">11:15 – 12:15</td>
     <td style="border: 1px solid black; padding: 8px;">Panel Discussion</td>
     <td style="border: 1px solid black; padding: 8px;">15:30 – 17:30</td>
-    <td style="border: 1px solid black; padding: 8px;">Poster Session</td>
+    <td style="border: 1px solid black; padding: 8px;">Poster Session & Demos</td>
   </tr>
 </table>
