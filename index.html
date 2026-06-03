@@ -52,6 +52,7 @@ robots: noindex
       padding: 70px 0;
       border-top: 1px solid #e5e7eb;
       scroll-margin-top: 50px;
+      min-height: 80vh;
     }
 
     .embedded-page-section:first-child {
@@ -83,6 +84,23 @@ robots: noindex
       border: 1px dashed #ddd;
       border-radius: 10px;
       background: #fafafa;
+    }
+
+    /*
+      Active left-menu button while scrolling.
+    */
+    .nav-button.active-section {
+      background: rgba(255, 255, 255, 0.24) !important;
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+      transform: scale(1.08);
+      box-shadow: 0 0 14px rgba(255, 255, 255, 0.38);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .webinar-highlight.active-section {
+      background: rgba(255, 80, 80, 0.28) !important;
+      box-shadow: 0 0 14px rgba(255, 80, 80, 0.48);
     }
   </style>
 
@@ -170,8 +188,24 @@ robots: noindex
       }
 
       /*
-        NEW: allow scrolling from the first landing page.
-        When the user scrolls down, the cover collapses and the page moves to Overview.
+        Highlight the corresponding button in the left navigation.
+      */
+      const navLinks = document.querySelectorAll('.navigation__item a[href*="#"]');
+
+      function setActiveNav(sectionId) {
+        navLinks.forEach(function (link) {
+          link.classList.remove("active-section");
+
+          const href = link.getAttribute("href");
+          if (href && href.endsWith("#" + sectionId)) {
+            link.classList.add("active-section");
+          }
+        });
+      }
+
+      /*
+        Allow scrolling from the first landing page.
+        When the user scrolls down, the cover collapses and moves to Overview.
       */
       let landingOpened = false;
 
@@ -183,6 +217,8 @@ robots: noindex
         if (cover && !cover.classList.contains("panel-cover--collapsed")) {
           landingOpened = true;
           openHomeContent();
+
+          setActiveNav("overview");
 
           setTimeout(function () {
             scrollToSection("#overview", 0);
@@ -267,12 +303,41 @@ robots: noindex
       });
 
       /*
+        Observe sections and update active left-menu button while scrolling.
+      */
+      const observerOptions = {
+        root: null,
+        rootMargin: "-35% 0px -45% 0px",
+        threshold: 0
+      };
+
+      const sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            setActiveNav(entry.target.id);
+
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + entry.target.id);
+            }
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(function (section) {
+        sectionObserver.observe(section);
+      });
+
+      /*
         If user lands directly on /#overview, /#speakers, etc.,
         collapse the cover and show the homepage content.
       */
       if (window.location.hash) {
         landingOpened = true;
         openHomeContent();
+
+        const initialId = window.location.hash.replace("#", "");
+        setActiveNav(initialId);
+
         scrollToSection(window.location.hash, 500);
       }
 
@@ -291,8 +356,12 @@ robots: noindex
 
             if (target) {
               event.preventDefault();
+
               landingOpened = true;
               openHomeContent();
+
+              const sectionId = hash.replace("#", "");
+              setActiveNav(sectionId);
 
               if (history.pushState) {
                 history.pushState(null, null, hash);
