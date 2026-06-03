@@ -123,18 +123,17 @@ robots: noindex
     }
 
     /*
-      Mobile-only fix:
-      On phones, the dropdown menu should only show when the hamburger menu
-      has explicitly opened it. This does not affect laptop/desktop.
+      Mobile-only menu control.
+      This does not affect desktop/laptop screens.
     */
     @media (max-width: 768px) {
-      .navigation-wrapper:not(.visible) {
+      .navigation-wrapper.mobile-force-hidden {
         display: none !important;
         opacity: 0 !important;
         pointer-events: none !important;
       }
 
-      .navigation-wrapper.visible {
+      .navigation-wrapper.mobile-force-visible {
         display: flex !important;
         opacity: 1 !important;
         pointer-events: auto !important;
@@ -197,6 +196,10 @@ robots: noindex
       const navLinks = document.querySelectorAll('.navigation__item a[href*="#"]');
       const sections = document.querySelectorAll(".embedded-page-section[data-url]");
 
+      function isMobileView() {
+        return window.innerWidth <= 768;
+      }
+
       function clearActiveNav() {
         navLinks.forEach(function (link) {
           link.classList.remove("active-section");
@@ -217,22 +220,50 @@ robots: noindex
       clearActiveNav();
 
       /*
-        Mobile-only fix:
-        Close the hamburger dropdown after a tab is selected, after scrolling,
-        or after entering/leaving the landing page. Desktop is untouched.
+        Mobile-only hamburger control.
+        Desktop/laptop screens are not affected.
       */
-      function closeMobileMenu() {
-        if (window.innerWidth > 768) return;
+      function openMobileMenu() {
+        if (!isMobileView()) return;
 
         const navWrapper = document.querySelector(".navigation-wrapper");
         const menuIcon = document.querySelector(".btn-mobile-menu__icon");
         const closeIcon = document.querySelector(".btn-mobile-close__icon");
 
         if (navWrapper) {
+          navWrapper.classList.remove("mobile-force-hidden");
+          navWrapper.classList.add("mobile-force-visible");
+          navWrapper.classList.add("visible");
+          navWrapper.style.display = "flex";
+          navWrapper.style.opacity = "1";
+          navWrapper.style.pointerEvents = "auto";
+        }
+
+        if (menuIcon) {
+          menuIcon.classList.add("hidden");
+        }
+
+        if (closeIcon) {
+          closeIcon.classList.remove("hidden");
+        }
+      }
+
+      function closeMobileMenu() {
+        if (!isMobileView()) return;
+
+        const navWrapper = document.querySelector(".navigation-wrapper");
+        const menuIcon = document.querySelector(".btn-mobile-menu__icon");
+        const closeIcon = document.querySelector(".btn-mobile-close__icon");
+
+        if (navWrapper) {
+          navWrapper.classList.remove("mobile-force-visible");
           navWrapper.classList.remove("visible");
           navWrapper.classList.remove("animated");
           navWrapper.classList.remove("bounceInDown");
-          navWrapper.removeAttribute("style");
+          navWrapper.classList.add("mobile-force-hidden");
+          navWrapper.style.display = "none";
+          navWrapper.style.opacity = "0";
+          navWrapper.style.pointerEvents = "none";
         }
 
         if (menuIcon) {
@@ -244,36 +275,49 @@ robots: noindex
         }
       }
 
+      function resetMobileMenuForDesktop() {
+        if (isMobileView()) return;
+
+        const navWrapper = document.querySelector(".navigation-wrapper");
+
+        if (navWrapper) {
+          navWrapper.classList.remove("mobile-force-hidden");
+          navWrapper.classList.remove("mobile-force-visible");
+          navWrapper.style.display = "";
+          navWrapper.style.opacity = "";
+          navWrapper.style.pointerEvents = "";
+        }
+      }
+
       /*
-        When mobile hamburger is tapped, allow the theme to toggle as usual.
-        Then normalize the visible/hidden state so it does not get stuck.
+        Start with the mobile menu closed.
+      */
+      if (isMobileView()) {
+        closeMobileMenu();
+      }
+
+      /*
+        Fully override mobile hamburger behavior only on mobile.
+        This avoids the stuck-open/stuck-closed issue.
       */
       const mobileMenuButton = document.querySelector(".btn-mobile-menu");
+
       if (mobileMenuButton) {
-        mobileMenuButton.addEventListener("click", function () {
-          setTimeout(function () {
-            const navWrapper = document.querySelector(".navigation-wrapper");
-            const menuIcon = document.querySelector(".btn-mobile-menu__icon");
-            const closeIcon = document.querySelector(".btn-mobile-close__icon");
+        mobileMenuButton.addEventListener("click", function (event) {
+          if (!isMobileView()) return;
 
-            if (window.innerWidth <= 768 && navWrapper) {
-              const shouldBeOpen = closeIcon && !closeIcon.classList.contains("hidden");
+          event.preventDefault();
+          event.stopPropagation();
 
-              if (shouldBeOpen) {
-                navWrapper.classList.add("visible");
-              } else {
-                navWrapper.classList.remove("visible");
-                navWrapper.classList.remove("animated");
-                navWrapper.classList.remove("bounceInDown");
-                navWrapper.removeAttribute("style");
+          const navWrapper = document.querySelector(".navigation-wrapper");
+          const isOpen = navWrapper && navWrapper.classList.contains("mobile-force-visible");
 
-                if (menuIcon) {
-                  menuIcon.classList.remove("hidden");
-                }
-              }
-            }
-          }, 30);
-        });
+          if (isOpen) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        }, true);
       }
 
       function openHomeContent() {
@@ -493,12 +537,14 @@ robots: noindex
       }, { passive: true });
 
       window.addEventListener("touchmove", function (event) {
-        closeMobileMenu();
-
         if (!touchStartY || !event.touches || event.touches.length === 0) return;
 
         const touchCurrentY = event.touches[0].clientY;
         const deltaY = touchStartY - touchCurrentY;
+
+        if (Math.abs(deltaY) > 8) {
+          closeMobileMenu();
+        }
 
         if (deltaY > 20 && !landingOpened) {
           openLandingOnScroll();
@@ -520,7 +566,11 @@ robots: noindex
       }, { passive: true });
 
       window.addEventListener("resize", function () {
-        closeMobileMenu();
+        if (isMobileView()) {
+          closeMobileMenu();
+        } else {
+          resetMobileMenuForDesktop();
+        }
       });
 
       window.addEventListener("keydown", function (event) {
