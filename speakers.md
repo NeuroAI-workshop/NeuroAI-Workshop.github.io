@@ -82,7 +82,7 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
 
 ## Talk Titles
 
-- **Karl Friston:** “TBA”
+- **Karl Friston:** “---”
 - **Doris Tsao:** “Representing the visual world ”
 - **Evelina Federenko:** “Language and thought in brains and machines”
 - **Tom Oxley:** “Towards abstracting mechanisms underlying cognitions directly from scalable neural recordings”
