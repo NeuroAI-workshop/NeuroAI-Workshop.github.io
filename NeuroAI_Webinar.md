@@ -38,7 +38,7 @@ Want to stay updated on our upcoming webinars?
 
 ## Past Webinars  
 
-- **Speaker:** Thomas Parr, NIHR Academic Clinical Fellow in Neurology at the Nuffield Department of Clinical Neurosciences, University of Oxford.
+- **Speaker:** Thomas Parr, NIHR Academic Clinical Fellow in Neurology at the Nuffield Department of Clinical Neurosciences, University of Oxford. 
   **Title:** *An anatomy of (active) inference*  
   **Time:** 7 AM EDT / 12 PM BST - 10th Oct 2025     
   **Recording:** [Youtube Channel](https://youtu.be/bz34roWztqw)
