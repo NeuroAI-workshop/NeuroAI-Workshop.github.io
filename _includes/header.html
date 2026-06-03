@@ -10,7 +10,7 @@
   <link rel="icon" href="{{ site.baseurl }}/images/favicons/Neurips.jpg" type="image/jpg">
   
   <style>
-    /* Fixed dropdown menu */
+    /* Past workshops dropdown */
     .previous-years-dropdown {
       position: fixed;
       top: 20px;
@@ -58,7 +58,20 @@
       text-decoration: underline;
     }
 
-    /* Keep the main header content centered on the full page */
+    /* GIF background */
+    .panel-cover {
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      overflow: hidden;
+    }
+
+    /* Make GIF visible but keep text readable */
+    .panel-cover--overlay {
+      background-color: rgba(0, 0, 0, 0.18) !important;
+    }
+
+    /* Landing page content */
     .panel-main__content {
       width: 100%;
       max-width: 1000px;
@@ -66,6 +79,13 @@
       margin-right: auto;
       text-align: center;
       box-sizing: border-box;
+    }
+
+    .panel-cover__title,
+    .panel-title {
+      font-size: 3.4em;
+      line-height: 1.15;
+      font-weight: 700;
     }
 
     /* Cleaner landing-page navigation grid */
@@ -157,9 +177,16 @@
       vertical-align: middle;
     }
 
+    /* Mobile / tablet landing page */
     @media (max-width: 980px) {
       .panel-main__content {
         max-width: 620px;
+      }
+
+      .panel-cover__title,
+      .panel-title {
+        font-size: 2.6em;
+        line-height: 1.15;
       }
 
       .cover-navigation--primary .navigation {
@@ -188,6 +215,12 @@
         max-width: 92vw;
       }
 
+      .panel-cover__title,
+      .panel-title {
+        font-size: 2.1em;
+        line-height: 1.15;
+      }
+
       .cover-navigation--primary .navigation {
         grid-template-columns: 1fr;
         max-width: 280px;
@@ -205,8 +238,82 @@
         padding: 8px 14px;
       }
     }
+
+    /* 
+      Important fix:
+      When the landing page collapses into the left sidebar,
+      shrink the title, description, and navigation so they do not spill
+      into the Overview/content area.
+    */
+    @media (min-width: 769px) {
+      .panel-cover.panel-cover--collapsed {
+        width: 32% !important;
+        max-width: 32% !important;
+      }
+
+      .content-wrapper {
+        margin-left: 32% !important;
+        width: 68% !important;
+      }
+
+      .panel-cover.panel-cover--collapsed .panel-main__content {
+        max-width: 88% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+      }
+
+      .panel-cover.panel-cover--collapsed .panel-cover__title,
+      .panel-cover.panel-cover--collapsed .panel-title {
+        font-size: 1.85rem !important;
+        line-height: 1.15 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.06em !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+      }
+
+      .panel-cover.panel-cover--collapsed .panel-cover__description {
+        font-size: 1.05rem !important;
+        line-height: 1.25 !important;
+      }
+
+      .panel-cover.panel-cover--collapsed h2 {
+        font-size: 0.95rem !important;
+        line-height: 1.25 !important;
+      }
+
+      .panel-cover.panel-cover--collapsed h3 {
+        font-size: 0.9rem !important;
+        line-height: 1.25 !important;
+      }
+
+      .panel-cover.panel-cover--collapsed .cover-navigation--primary .navigation {
+        width: 100% !important;
+        max-width: 360px !important;
+        grid-template-columns: repeat(2, minmax(130px, 1fr)) !important;
+        gap: 10px 10px !important;
+      }
+
+      .panel-cover.panel-cover--collapsed .cover-navigation--primary .navigation__item.webinar-item {
+        grid-column: 1 / span 2 !important;
+      }
+
+      .panel-cover.panel-cover--collapsed .cover-navigation--primary .nav-button {
+        font-size: 0.78rem !important;
+        padding: 8px 10px !important;
+        min-height: 38px !important;
+        letter-spacing: 0.02em !important;
+      }
+
+      .panel-cover.panel-cover--collapsed .new-badge {
+        font-size: 0.55rem !important;
+        padding: 2px 5px !important;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <!-- Past Workshops Dropdown -->
@@ -226,8 +333,8 @@
 
 <!-- Header -->
 <header class="panel-cover {% if site.disable_landing_page %}panel-cover--collapsed{% endif %}"
-  style="background-image: url('{{ site.baseurl }}/images/neuroai_cover_animation.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-  
+  style="background-image: url('{{ site.baseurl }}/images/neuroai_cover_animation.gif');">
+
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
