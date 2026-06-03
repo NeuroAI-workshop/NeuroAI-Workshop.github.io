@@ -154,19 +154,62 @@ robots: noindex
         }
       }
 
-      function scrollToHash() {
-        if (!window.location.hash) return;
+      function scrollToSection(hash, delay) {
+        if (!hash) return;
 
-        const target = document.querySelector(window.location.hash);
+        const target = document.querySelector(hash);
+
         if (target) {
           setTimeout(function () {
             target.scrollIntoView({
               behavior: "smooth",
               block: "start"
             });
-          }, 500);
+          }, delay || 300);
         }
       }
+
+      /*
+        NEW: allow scrolling from the first landing page.
+        When the user scrolls down, the cover collapses and the page moves to Overview.
+      */
+      let landingOpened = false;
+
+      function openLandingOnScroll() {
+        if (landingOpened) return;
+
+        const cover = document.querySelector(".panel-cover");
+
+        if (cover && !cover.classList.contains("panel-cover--collapsed")) {
+          landingOpened = true;
+          openHomeContent();
+
+          setTimeout(function () {
+            scrollToSection("#overview", 0);
+          }, 250);
+        }
+      }
+
+      window.addEventListener("wheel", function (event) {
+        if (event.deltaY > 0) {
+          openLandingOnScroll();
+        }
+      }, { passive: true });
+
+      window.addEventListener("touchmove", function () {
+        openLandingOnScroll();
+      }, { passive: true });
+
+      window.addEventListener("keydown", function (event) {
+        if (
+          event.key === "ArrowDown" ||
+          event.key === "PageDown" ||
+          event.key === " " ||
+          event.key === "Spacebar"
+        ) {
+          openLandingOnScroll();
+        }
+      });
 
       /*
         Load the standalone markdown-rendered pages into the homepage sections.
@@ -228,8 +271,9 @@ robots: noindex
         collapse the cover and show the homepage content.
       */
       if (window.location.hash) {
+        landingOpened = true;
         openHomeContent();
-        scrollToHash();
+        scrollToSection(window.location.hash, 500);
       }
 
       /*
@@ -237,9 +281,7 @@ robots: noindex
         collapse the cover and scroll to the section.
       */
       document.querySelectorAll('a[href*="/#"], a[href^="#"]').forEach(function (link) {
-        link.addEventListener("click", function () {
-          openHomeContent();
-
+        link.addEventListener("click", function (event) {
           const href = link.getAttribute("href");
           const hashIndex = href.indexOf("#");
 
@@ -248,12 +290,17 @@ robots: noindex
             const target = document.querySelector(hash);
 
             if (target) {
-              setTimeout(function () {
-                target.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start"
-                });
-              }, 300);
+              event.preventDefault();
+              landingOpened = true;
+              openHomeContent();
+
+              if (history.pushState) {
+                history.pushState(null, null, hash);
+              } else {
+                window.location.hash = hash;
+              }
+
+              scrollToSection(hash, 300);
             }
           }
         });
