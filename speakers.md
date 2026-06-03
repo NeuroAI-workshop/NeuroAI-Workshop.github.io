@@ -41,7 +41,7 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
     line-height: 1.25;
   }
 
-  .speaker-info strong {
+  /* .speaker-info strong {
     font-size: 1.2em;
     color: blue;
   }
@@ -53,7 +53,23 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
 
   .speaker-info a:hover {
     text-decoration: underline;
-  }
+  } */
+
+  .speaker-info strong {
+  font-size: 1.2em;
+  color: #1f3a5f;
+  font-weight: 700;
+}
+
+.speaker-info a {
+  color: #1f3a5f;
+  text-decoration: none;
+}
+
+.speaker-info a:hover {
+  color: #2f6f9f;
+  text-decoration: underline;
+}
 
   @media (max-width: 900px) {
     .speaker-card {
