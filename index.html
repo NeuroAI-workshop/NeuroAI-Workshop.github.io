@@ -92,8 +92,8 @@ robots: noindex
 
     .content-wrapper {
       transition:
-        opacity 1.15s ease,
-        transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+        opacity 1.05s ease,
+        transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     body.homepage-transitioning .content-wrapper {
@@ -185,9 +185,6 @@ robots: noindex
       const navLinks = document.querySelectorAll('.navigation__item a[href*="#"]');
       const sections = document.querySelectorAll(".embedded-page-section[data-url]");
 
-      /*
-        No button should be active on the first landing page.
-      */
       function clearActiveNav() {
         navLinks.forEach(function (link) {
           link.classList.remove("active-section");
@@ -209,6 +206,10 @@ robots: noindex
 
       /*
         Open from full landing page into sidebar/content layout.
+        This mirrors closeHomeContent:
+        1. content hidden
+        2. cover collapses
+        3. content softly fades in
       */
       function openHomeContent() {
         const cover = document.querySelector(".panel-cover");
@@ -229,7 +230,7 @@ robots: noindex
           if (cover) {
             cover.classList.add("panel-cover--collapsed");
           }
-        }, 100);
+        }, 80);
 
         setTimeout(function () {
           document.body.classList.add("homepage-opened");
@@ -239,11 +240,12 @@ robots: noindex
             contentWrapper.style.opacity = "1";
             contentWrapper.style.transform = "translateY(0)";
           }
-        }, 420);
+        }, 900);
       }
 
       /*
         Close back from sidebar/content layout to full landing page.
+        This is the reverse of openHomeContent.
       */
       function closeHomeContent() {
         const cover = document.querySelector(".panel-cover");
@@ -280,6 +282,7 @@ robots: noindex
           }
 
           document.body.classList.remove("homepage-closing");
+
           window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -302,9 +305,6 @@ robots: noindex
         }
       }
 
-      /*
-        Track whether the landing page has opened.
-      */
       let landingOpened = false;
       let landingIsClosing = false;
 
@@ -326,16 +326,13 @@ robots: noindex
           landingOpened = true;
           openHomeContent();
 
-          /*
-            Activate Overview only after the transition has started.
-          */
           setTimeout(function () {
             setActiveNav("overview");
 
             if (history.replaceState) {
               history.replaceState(null, null, "#overview");
             }
-          }, 900);
+          }, 1050);
         }
       }
 
@@ -397,9 +394,7 @@ robots: noindex
       }, { passive: true });
 
       /*
-        Keyboard behavior:
-        - Down/PageDown/Space opens content.
-        - Up/PageUp/Home at top of Overview returns to landing page.
+        Keyboard behavior.
       */
       window.addEventListener("keydown", function (event) {
         if (
@@ -424,7 +419,7 @@ robots: noindex
       });
 
       /*
-        Load the standalone markdown-rendered pages into homepage sections.
+        Load standalone markdown-rendered pages into homepage sections.
       */
       sections.forEach(function (section) {
         const url = section.getAttribute("data-url");
@@ -448,16 +443,10 @@ robots: noindex
               content = doc.querySelector("main") || doc.body;
             }
 
-            /*
-              Remove scripts from embedded pages so they do not duplicate or break the homepage.
-            */
             content.querySelectorAll("script").forEach(function (el) {
               el.remove();
             });
 
-            /*
-              Remove the first repeated heading if it matches the section title.
-            */
             const firstHeading = content.querySelector("h1, h2");
             if (
               firstHeading &&
@@ -478,7 +467,6 @@ robots: noindex
 
       /*
         Observe sections and update active left-menu button while scrolling.
-        This should only activate after the landing page has opened.
       */
       const observerOptions = {
         root: null,
@@ -508,8 +496,7 @@ robots: noindex
       });
 
       /*
-        If user lands directly on /#overview, /#speakers, etc.,
-        collapse the cover and show the corresponding section.
+        If user lands directly on /#overview, /#speakers, etc.
       */
       if (window.location.hash) {
         landingOpened = true;
@@ -518,12 +505,11 @@ robots: noindex
         const initialId = window.location.hash.replace("#", "");
         setActiveNav(initialId);
 
-        scrollToSection(window.location.hash, 750);
+        scrollToSection(window.location.hash, 1100);
       }
 
       /*
-        If user clicks a homepage section button in the header,
-        collapse the cover and scroll to the section.
+        If user clicks a homepage section button in the header.
       */
       document.querySelectorAll('a[href*="/#"], a[href^="#"]').forEach(function (link) {
         link.addEventListener("click", function (event) {
@@ -550,7 +536,7 @@ robots: noindex
                 window.location.hash = hash;
               }
 
-              scrollToSection(hash, 700);
+              scrollToSection(hash, 1100);
             }
           }
         });
