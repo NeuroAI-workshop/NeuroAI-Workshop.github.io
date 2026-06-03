@@ -41,7 +41,7 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
     line-height: 1.25;
   }
 
-  .organizer-info strong {
+  /* .organizer-info strong {
     font-size: 1.2em;
     color: blue;
   }
@@ -53,7 +53,23 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
 
   .organizer-info a:hover {
     text-decoration: underline;
-  }
+  } */
+
+  .organizer-info strong {
+  font-size: 1.2em;
+  color: #1f3a5f;
+  font-weight: 700;
+}
+
+.organizer-info a {
+  color: #1f3a5f;
+  text-decoration: none;
+}
+
+.organizer-info a:hover {
+  color: #2f6f9f;
+  text-decoration: underline;
+}
 
   @media (max-width: 900px) {
     .organizer-card {
