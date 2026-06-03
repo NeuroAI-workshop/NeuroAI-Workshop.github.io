@@ -188,3 +188,12 @@ pre.highlight code,
   background-color: rgba(0, 0, 0, 0.18) !important;
 }
 
+
+/* Make main workshop title larger on the landing page */
+.panel-cover__title,
+.panel-title {
+  font-size: 3.4em !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+}
+
