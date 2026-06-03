@@ -29,14 +29,15 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
     </div>
   </div>
 
-   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/matteo.jpeg" alt="Matteo Ferrante" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
-    <div style="font-size: 0.9em;">
-      <strong style="font-size: 1.2em; color: blue;">
-      </strong><br>
-      Tether Evo
-    </div>
+<div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
+  <img src="{{ site.baseurl }}/images/organizers/matteo.jpeg" alt="Matteo Ferrante" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
+  <div style="font-size: 0.9em;">
+    <strong style="font-size: 1.2em; color: blue;">
+      Matteo Ferrante
+    </strong><br>
+    Tether Evo
   </div>
+</div>
 
 
   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
