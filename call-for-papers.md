@@ -29,6 +29,13 @@ Please note submissions that solely explore ML/AI algorithms without an explicit
 
 **Notification of Acceptance:** September 29, 2026
 
+The top 3 highly scored submissions will be chosen for spotlight talks.
+
+**Reviewer Nomination Form:** [Google Form](https://forms.gle/sEAeHx1svWBgbSMU7)
+
+For further information and should you have any inquiries, please contact: [neuroai.neurips2024@gmail.com](mailto:neuroai.neurips2024@gmail.com)
+
+
 <div align="center">
 
 <div align="center" style="padding: 1.5rem 1rem; margin: 2rem 0; border: 1px solid #e5e7eb; border-radius: 16px; background: linear-gradient(135deg, #fff7ed, #f8fafc);">
@@ -47,9 +54,4 @@ Please note submissions that solely explore ML/AI algorithms without an explicit
 
 </div>
 
-The top 3 highly scored submissions will be chosen for spotlight talks.
-
-**Reviewer Nomination Form:** [Google Form](https://forms.gle/sEAeHx1svWBgbSMU7)
-
-For further information and should you have any inquiries, please contact: [neuroai.neurips2024@gmail.com](mailto:neuroai.neurips2024@gmail.com)
 
