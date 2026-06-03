@@ -10,17 +10,17 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 20px;">
   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Moein Khajehnejad.jpg" alt="Moein Khajehnejad" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
+    <img src="{{ site.baseurl }}/images/organizers/Moein.jpg" alt="Moein Khajehnejad" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
         <a href="https://moein-khajehnejad.github.io/" style="color: blue;">Moein Khajehnejad</a>
       </strong><br>
-      Monash University
+      Monash University; Tether Evo
     </div>
   </div>
 
   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Forough Habibollahi.jpg" alt="Forough Habibollahi" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
+    <img src="{{ site.baseurl }}/images/organizers/Forough.jpg" alt="Forough Habibollahi" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
         <a href="https://foroughha.github.io/" style="color: blue;">Forough Habibollahi</a>
@@ -29,45 +29,45 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
     </div>
   </div>
 
+   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
+    <img src="{{ site.baseurl }}/images/organizers/Matteo.jpeg" alt="Matteo Ferrante" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
+    <div style="font-size: 0.9em;">
+      <strong style="font-size: 1.2em; color: blue;">
+      </strong><br>
+      Tether Evo
+    </div>
+  </div>
+
+
   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Adeel Razi.jpeg" alt="Adeel Razi" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
+    <img src="{{ site.baseurl }}/images/organizers/sueyeon.jpg" alt="SueYeon Chung" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://www.adeelrazi.org/" style="color: blue;">Adeel Razi</a>
+        <a href="https://sites.google.com/site/sueyeonchung/" style="color: blue;">SueYeon Chung</a>
       </strong><br>
-      Monash University
+      Kempner Institute, Harvard University
     </div>
   </div>
 
-
- <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Eva Dyer.jpg" alt="Eva Dyer" style="width: 200px; height: 200px; border-radius: 50%; margin-bottom: 10px;">
+  <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
+    <img src="{{ site.baseurl }}/images/organizers/asim iqgbal.jpg" alt="Asim Iqgbal" style="width: 200px; height: 210px; border-radius: 50%; margin-bottom: 10px;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://dyerlab.gatech.edu/" style="color: blue;">Eva Dyer</a>
+        <a href="https://www.tibbtech.com/team/asim/" style="color: blue;">Asim Iqgbal</a>
       </strong><br>
-      GeorgiaTech Institute
+      Tibbling Technologies; Weill Cornell Medicine
     </div>
   </div>
+
   
 
   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Anthony Zador.png" alt="Anthony Zador" style="width: 200px; height: 200px; border-radius: 50%; margin-bottom: 10px;">
+    <img src="{{ site.baseurl }}/images/organizers/Megan Peters.jpeg" alt="Megan A. K. Peters" style="width: 200px; height: 200px; border-radius: 50%; margin-bottom: 10px;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://www.cshl.edu/research/faculty-staff/anthony-zador/" style="color: blue;">Anthony Zador</a>
+        <a href="https://www.meganakpeters.org/" style="color: blue;">Megan A. K. Peters</a>
       </strong><br>
-      Cold Spring Harbor Laboratory
-    </div>
-  </div>
-
-  <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Yoshua Bengio.jpeg" alt="Yoshua Bengio" style="width: 200px; height: 200px; border-radius: 50%; margin-bottom: 10px;">
-    <div style="font-size: 0.9em;">
-      <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://yoshuabengio.org/" style="color: blue;">Yoshua Bengio</a>
-      </strong><br>
-      MILA
+      University of California, Irvine; University College London; Neuromatch
     </div>
   </div>
 </div>
