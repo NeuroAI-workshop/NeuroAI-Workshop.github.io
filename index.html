@@ -32,6 +32,133 @@ robots: noindex
     <p>{{ site.description }}</p>
   </div>
 
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .homepage-sections {
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+  }
+
+  .embedded-page-section {
+    padding: 70px 0;
+    border-top: 1px solid #e5e7eb;
+    scroll-margin-top: 40px;
+  }
+
+  .embedded-page-section:first-child {
+    border-top: none;
+  }
+
+  .home-section-title {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .embedded-page-content {
+    width: 100%;
+  }
+
+  .section-loading {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+  }
+</style>
+
+<div class="homepage-sections">
+
+  <section id="overview" class="embedded-page-section" data-url="{{ site.baseurl }}/overview/" data-title="Overview">
+    <h1 class="home-section-title">Overview</h1>
+    <div class="embedded-page-content section-loading">Loading Overview...</div>
+  </section>
+
+  <section id="organizers" class="embedded-page-section" data-url="{{ site.baseurl }}/organizers/" data-title="Organizers">
+    <h1 class="home-section-title">Organizers</h1>
+    <div class="embedded-page-content section-loading">Loading Organizers...</div>
+  </section>
+
+  <section id="advisory-board" class="embedded-page-section" data-url="{{ site.baseurl }}/advisory-board/" data-title="Steering Committee">
+    <h1 class="home-section-title">Steering Committee</h1>
+    <div class="embedded-page-content section-loading">Loading Steering Committee...</div>
+  </section>
+
+  <section id="speakers" class="embedded-page-section" data-url="{{ site.baseurl }}/speakers/" data-title="Speakers">
+    <h1 class="home-section-title">Speakers</h1>
+    <div class="embedded-page-content section-loading">Loading Speakers...</div>
+  </section>
+
+  <section id="call-for-papers" class="embedded-page-section" data-url="{{ site.baseurl }}/call-for-papers/" data-title="Call for Papers">
+    <h1 class="home-section-title">Call for Papers</h1>
+    <div class="embedded-page-content section-loading">Loading Call for Papers...</div>
+  </section>
+
+  <section id="travel-awards" class="embedded-page-section" data-url="{{ site.baseurl }}/travel-awards/" data-title="Travel Awards">
+    <h1 class="home-section-title">Travel Awards</h1>
+    <div class="embedded-page-content section-loading">Loading Travel Awards...</div>
+  </section>
+
+  <section id="schedules" class="embedded-page-section" data-url="{{ site.baseurl }}/schedules/" data-title="Schedule">
+    <h1 class="home-section-title">Schedule</h1>
+    <div class="embedded-page-content section-loading">Loading Schedule...</div>
+  </section>
+
+  <section id="accepted-papers" class="embedded-page-section" data-url="{{ site.baseurl }}/accepted-papers/" data-title="Accepted Papers">
+    <h1 class="home-section-title">Accepted Papers</h1>
+    <div class="embedded-page-content section-loading">Loading Accepted Papers...</div>
+  </section>
+
+  <section id="webinar-series" class="embedded-page-section" data-url="{{ site.baseurl }}/NeuroAI_Webinar/" data-title="Webinar Series">
+    <h1 class="home-section-title">Webinar Series</h1>
+    <div class="embedded-page-content section-loading">Loading Webinar Series...</div>
+  </section>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".embedded-page-section[data-url]");
+
+  sections.forEach(section => {
+    const url = section.getAttribute("data-url");
+    const title = section.getAttribute("data-title");
+    const container = section.querySelector(".embedded-page-content");
+
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+
+        let content = doc.querySelector(".content-wrapper__inner");
+
+        if (!content) {
+          content = doc.querySelector("main") || doc.body;
+        }
+
+        content.querySelectorAll("script").forEach(el => el.remove());
+
+        const firstHeading = content.querySelector("h1, h2");
+        if (
+          firstHeading &&
+          firstHeading.textContent.trim().toLowerCase() === title.toLowerCase()
+        ) {
+          firstHeading.remove();
+        }
+
+        container.classList.remove("section-loading");
+        container.innerHTML = content.innerHTML;
+      })
+      .catch(() => {
+        container.innerHTML = "Content will be available soon.";
+      });
+  });
+});
+</script>
 
   <hr class="post-list__divider ">
 
