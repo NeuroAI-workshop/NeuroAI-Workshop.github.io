@@ -41,7 +41,7 @@ We are grateful to our steering committee members for their guidance and support
     line-height: 1.25;
   }
 
-  .steering-info strong {
+  /* .steering-info strong {
     font-size: 1.2em;
     color: blue;
   }
@@ -53,7 +53,23 @@ We are grateful to our steering committee members for their guidance and support
 
   .steering-info a:hover {
     text-decoration: underline;
-  }
+  } */
+
+  .steering-info strong {
+  font-size: 1.2em;
+  color: #1f3a5f;
+  font-weight: 700;
+}
+
+.steering-info a {
+  color: #1f3a5f;
+  text-decoration: none;
+}
+
+.steering-info a:hover {
+  color: #2f6f9f;
+  text-decoration: underline;
+}
 
   @media (max-width: 900px) {
     .steering-card {
