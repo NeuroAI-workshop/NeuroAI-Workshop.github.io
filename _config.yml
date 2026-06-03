@@ -46,6 +46,6 @@
 title: "2nd NeuroAI Workshop @ NeurIPS:<br>NeuroAI in the Loop "
 date_text: "<span style='color: white;'>December, 2026</span>"
 where: "<span style='color: white;'>NeurIPS2026, Sydney, Australia</span>"
-description: "Scalable Biological Priors for Adaptive Intelligence"
+description: "<span style='font-size: 2em; font-weight: 500;'>Scalable Biological Priors for Adaptive Intelligence</span>"
 url: "https://neuroai-workshop.github.io/"
 baseurl: "" # the subpath of your site, e.g. /blog
