@@ -80,6 +80,8 @@ robots: noindex
 
     /*
       Elegant transition between full landing page and left sidebar layout.
+      Used only for scroll down from first page to Overview,
+      and scroll up from Overview back to first page.
     */
     .panel-cover {
       transition:
@@ -205,11 +207,7 @@ robots: noindex
       clearActiveNav();
 
       /*
-        Open from full landing page into sidebar/content layout.
-        This mirrors closeHomeContent:
-        1. content hidden
-        2. cover collapses
-        3. content softly fades in
+        Slow/elegant opening used only for scrolling down from the first page.
       */
       function openHomeContent() {
         const cover = document.querySelector(".panel-cover");
@@ -244,8 +242,33 @@ robots: noindex
       }
 
       /*
+        Fast opening used for clicking a button from the first landing page.
+        This avoids slowly passing through Overview before reaching another tab.
+      */
+      function openHomeContentFast() {
+        const cover = document.querySelector(".panel-cover");
+        const contentWrapper = document.querySelector(".content-wrapper");
+
+        document.body.classList.add("homepage-opened");
+        document.body.classList.remove("homepage-transitioning");
+        document.body.classList.remove("homepage-closing");
+
+        if (contentWrapper) {
+          contentWrapper.classList.add("content-wrapper--show");
+          contentWrapper.style.display = "block";
+          contentWrapper.style.visibility = "visible";
+          contentWrapper.style.opacity = "1";
+          contentWrapper.style.transform = "translateY(0)";
+        }
+
+        if (cover) {
+          cover.classList.add("panel-cover--collapsed");
+        }
+      }
+
+      /*
         Close back from sidebar/content layout to full landing page.
-        This is the reverse of openHomeContent.
+        This remains soft/elegant when scrolling up from Overview.
       */
       function closeHomeContent() {
         const cover = document.querySelector(".panel-cover");
@@ -317,6 +340,10 @@ robots: noindex
         return window.scrollY <= 40 || rect.top >= -20;
       }
 
+      /*
+        Scroll down from first page to Overview:
+        use the elegant transition.
+      */
       function openLandingOnScroll() {
         if (landingOpened || landingIsClosing) return;
 
@@ -336,6 +363,10 @@ robots: noindex
         }
       }
 
+      /*
+        Scroll up from top of Overview back to first page:
+        use the elegant reverse transition.
+      */
       function closeLandingOnScrollUp() {
         if (!landingOpened || landingIsClosing) return;
         if (!isNearTopOfOverview()) return;
@@ -352,8 +383,8 @@ robots: noindex
 
       /*
         Wheel behavior:
-        - Scroll down on first page opens content.
-        - Scroll up at the top of Overview returns to first page.
+        - Scroll down on first page opens Overview with soft transition.
+        - Scroll up at the top of Overview returns to first page with soft transition.
       */
       window.addEventListener("wheel", function (event) {
         if (event.deltaY > 0 && !landingOpened) {
@@ -496,20 +527,23 @@ robots: noindex
       });
 
       /*
-        If user lands directly on /#overview, /#speakers, etc.
+        If user lands directly on /#overview, /#speakers, etc.,
+        open quickly and go to that section.
       */
       if (window.location.hash) {
         landingOpened = true;
-        openHomeContent();
+        openHomeContentFast();
 
         const initialId = window.location.hash.replace("#", "");
         setActiveNav(initialId);
 
-        scrollToSection(window.location.hash, 1100);
+        scrollToSection(window.location.hash, 250);
       }
 
       /*
-        If user clicks a homepage section button in the header.
+        If user clicks a homepage section button:
+        - From the first landing page: open quickly and go directly to clicked section.
+        - From an already-open section: switch quickly without re-triggering fade.
       */
       document.querySelectorAll('a[href*="/#"], a[href^="#"]').forEach(function (link) {
         link.addEventListener("click", function (event) {
@@ -523,11 +557,11 @@ robots: noindex
             if (target) {
               event.preventDefault();
 
+              const sectionId = hash.replace("#", "");
+
               landingOpened = true;
               landingIsClosing = false;
-              openHomeContent();
 
-              const sectionId = hash.replace("#", "");
               setActiveNav(sectionId);
 
               if (history.pushState) {
@@ -536,7 +570,33 @@ robots: noindex
                 window.location.hash = hash;
               }
 
-              scrollToSection(hash, 1100);
+              /*
+                Case 1: still on the full first page.
+                Open quickly and go straight to the clicked section.
+              */
+              const cover = document.querySelector(".panel-cover");
+
+              if (cover && !cover.classList.contains("panel-cover--collapsed")) {
+                openHomeContentFast();
+
+                setTimeout(function () {
+                  target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                  });
+                }, 250);
+
+                return;
+              }
+
+              /*
+                Case 2: already inside the one-page site.
+                Just scroll to selected section quickly.
+              */
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
             }
           }
         });
