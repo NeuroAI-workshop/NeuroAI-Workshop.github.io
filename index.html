@@ -79,7 +79,36 @@ robots: noindex
     }
 
     /*
+      Smooth transition from full landing page to left sidebar layout.
+    */
+    .panel-cover {
+      transition:
+        width 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+        max-width 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+        height 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.6s ease,
+        transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .content-wrapper {
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    body.homepage-transitioning .content-wrapper {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    body.homepage-opened .content-wrapper {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /*
       Active left-menu button while scrolling.
+      No button is active on the initial landing page.
     */
     .nav-button.active-section {
       background: rgba(255, 255, 255, 0.24) !important;
@@ -148,20 +177,59 @@ robots: noindex
   <script>
     document.addEventListener("DOMContentLoaded", function () {
 
+      const navLinks = document.querySelectorAll('.navigation__item a[href*="#"]');
+      const sections = document.querySelectorAll(".embedded-page-section[data-url]");
+
+      /*
+        Make sure no button is active on the first landing view.
+      */
+      function clearActiveNav() {
+        navLinks.forEach(function (link) {
+          link.classList.remove("active-section");
+        });
+      }
+
+      function setActiveNav(sectionId) {
+        navLinks.forEach(function (link) {
+          link.classList.remove("active-section");
+
+          const href = link.getAttribute("href");
+          if (href && href.endsWith("#" + sectionId)) {
+            link.classList.add("active-section");
+          }
+        });
+      }
+
+      clearActiveNav();
+
       function openHomeContent() {
         const cover = document.querySelector(".panel-cover");
         const contentWrapper = document.querySelector(".content-wrapper");
 
-        if (cover) {
-          cover.classList.add("panel-cover--collapsed");
-        }
+        document.body.classList.add("homepage-transitioning");
 
         if (contentWrapper) {
           contentWrapper.classList.add("content-wrapper--show");
           contentWrapper.style.display = "block";
           contentWrapper.style.visibility = "visible";
-          contentWrapper.style.opacity = "1";
         }
+
+        /*
+          Small delay allows the fade/slide transition to start before the cover collapses.
+        */
+        setTimeout(function () {
+          if (cover) {
+            cover.classList.add("panel-cover--collapsed");
+          }
+
+          document.body.classList.add("homepage-opened");
+          document.body.classList.remove("homepage-transitioning");
+
+          if (contentWrapper) {
+            contentWrapper.style.opacity = "1";
+            contentWrapper.style.transform = "translateY(0)";
+          }
+        }, 80);
       }
 
       function scrollToSection(hash, delay) {
@@ -180,24 +248,8 @@ robots: noindex
       }
 
       /*
-        Highlight the corresponding button in the left navigation.
-      */
-      const navLinks = document.querySelectorAll('.navigation__item a[href*="#"]');
-
-      function setActiveNav(sectionId) {
-        navLinks.forEach(function (link) {
-          link.classList.remove("active-section");
-
-          const href = link.getAttribute("href");
-          if (href && href.endsWith("#" + sectionId)) {
-            link.classList.add("active-section");
-          }
-        });
-      }
-
-      /*
         Allow scrolling from the first landing page.
-        When the user scrolls down, the cover collapses and moves to Overview.
+        When the user scrolls down, the cover smoothly collapses and moves to Overview.
       */
       let landingOpened = false;
 
@@ -210,19 +262,28 @@ robots: noindex
           landingOpened = true;
           openHomeContent();
 
-          setActiveNav("overview");
+          /*
+            Now the Overview button becomes active only after the scroll transition starts.
+          */
+          setTimeout(function () {
+            setActiveNav("overview");
+          }, 500);
 
+          /*
+            Delay gives the layout time to transition before scrolling to Overview.
+          */
           setTimeout(function () {
             scrollToSection("#overview", 0);
-          }, 250);
+          }, 850);
         }
       }
 
       window.addEventListener("wheel", function (event) {
-        if (event.deltaY > 0) {
+        if (event.deltaY > 0 && !landingOpened) {
+          event.preventDefault();
           openLandingOnScroll();
         }
-      }, { passive: true });
+      }, { passive: false });
 
       window.addEventListener("touchmove", function () {
         openLandingOnScroll();
@@ -242,8 +303,6 @@ robots: noindex
       /*
         Load the standalone markdown-rendered pages into the homepage sections.
       */
-      const sections = document.querySelectorAll(".embedded-page-section[data-url]");
-
       sections.forEach(function (section) {
         const url = section.getAttribute("data-url");
         const title = section.getAttribute("data-title");
@@ -296,6 +355,7 @@ robots: noindex
 
       /*
         Observe sections and update active left-menu button while scrolling.
+        This only starts affecting buttons after the landing page has opened.
       */
       const observerOptions = {
         root: null,
@@ -304,6 +364,11 @@ robots: noindex
       };
 
       const sectionObserver = new IntersectionObserver(function (entries) {
+        if (!landingOpened && !window.location.hash) {
+          clearActiveNav();
+          return;
+        }
+
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             setActiveNav(entry.target.id);
@@ -330,7 +395,7 @@ robots: noindex
         const initialId = window.location.hash.replace("#", "");
         setActiveNav(initialId);
 
-        scrollToSection(window.location.hash, 500);
+        scrollToSection(window.location.hash, 700);
       }
 
       /*
@@ -361,7 +426,7 @@ robots: noindex
                 window.location.hash = hash;
               }
 
-              scrollToSection(hash, 300);
+              scrollToSection(hash, 650);
             }
           }
         });
