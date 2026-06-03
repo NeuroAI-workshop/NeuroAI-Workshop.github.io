@@ -25,21 +25,24 @@ We strongly discourage the presentation of already completed and/or published ma
 
 Please note submissions that solely explore ML/AI algorithms without an explicit link to neuroscience are out of scope.
 
-**Submission Deadline:** <span style="color: red;">Extended to 23:59 August 29, 2026 (AoE)</span>
+**Submission Deadline:** <span style="color: red;"> 23:59 August 29, 2026 (AoE)</span>
 
 **Notification of Acceptance:** September 29, 2026
 
 <div align="center">
 
-### Submission Portal Coming Soon
+<div align="center" style="padding: 1.5rem 1rem; margin: 2rem 0; border: 1px solid #e5e7eb; border-radius: 16px; background: linear-gradient(135deg, #fff7ed, #f8fafc);">
 
-<p>
-  <img src="https://img.shields.io/badge/Status-Coming%20Soon-orange?style=for-the-badge&logo=github" alt="Submission portal coming soon">
+<h2 style="margin-bottom: 0.5rem;"> Submission Portal Coming Soon</h2>
+
+<p style="font-size: 1.05rem; margin-bottom: 1rem;">
+  We are preparing the submission portal and will share the link here shortly.
 </p>
 
 <p>
-  The submission portal is not open yet.<br>
-  Please check back soon for the paper submission link.
+  <span style="display: inline-block; padding: 0.45rem 0.9rem; border-radius: 999px; background: #f97316; color: white; font-weight: 700; letter-spacing: 0.04em;">
+    COMING SOON
+  </span>
 </p>
 
 </div>
