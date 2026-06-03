@@ -15,7 +15,6 @@ We are grateful to our advisory board members for their guidance and support in 
         <a href="https://research.monash.edu/en/persons/adeel-razi" style="color: blue;">Adeel Razi</a>
       </strong><br>
       Monash University<br>
-      <span style="color: OliveGreen; font-weight: 600;">Confirmed</span>
     </div>
   </div>
 
@@ -26,7 +25,6 @@ We are grateful to our advisory board members for their guidance and support in 
         <a href="https://www.cs.mcgill.ca/~dprecup/" style="color: blue;">Doina Precup</a>
       </strong><br>
       Google DeepMind<br>
-      <span style="color: OliveGreen; font-weight: 600;">Confirmed</span>
     </div>
   </div>
 
@@ -37,7 +35,6 @@ We are grateful to our advisory board members for their guidance and support in 
         <a href="https://www.cshl.edu/research/faculty-staff/anthony-zador/" style="color: blue;">Anthony Zador</a>
       </strong><br>
       Cold Spring Harbor Laboratory<br>
-      <span style="color: OliveGreen; font-weight: 600;">Confirmed</span>
     </div>
   </div>
 
@@ -48,7 +45,6 @@ We are grateful to our advisory board members for their guidance and support in 
         <a href="https://viterbi.usc.edu/directory/faculty/Shanechi/Maryam" style="color: blue;">Maryam Shanechi</a>
       </strong><br>
       USC<br>
-      <span style="color: OliveGreen; font-weight: 600;">Confirmed</span>
     </div>
   </div>
 
@@ -59,7 +55,6 @@ We are grateful to our advisory board members for their guidance and support in 
         <a href="https://en.wikipedia.org/wiki/Karl_J._Friston" style="color: blue;">Karl Friston</a>
       </strong><br>
       UCL<br>
-      <span style="color: OliveGreen; font-weight: 600;">Confirmed</span>
     </div>
   </div>
 
