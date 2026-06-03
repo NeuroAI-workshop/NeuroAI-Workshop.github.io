@@ -57,6 +57,131 @@
     .dropdown-menu li a:hover {
       text-decoration: underline;
     }
+
+    /* Cleaner landing-page navigation grid */
+    .navigation-wrapper {
+      margin-top: 18px;
+    }
+
+    .cover-navigation--primary {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .cover-navigation--primary .navigation {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(135px, 1fr));
+      gap: 11px 13px;
+      max-width: 760px;
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+      list-style: none;
+      justify-items: stretch;
+    }
+
+    .cover-navigation--primary .navigation__item {
+      margin: 0;
+      display: block;
+    }
+
+    .cover-navigation--primary .nav-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      width: 100%;
+      padding: 9px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 999px;
+      background: rgba(8, 15, 30, 0.22);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 650;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      box-sizing: border-box;
+      transition: all 0.22s ease;
+    }
+
+    .cover-navigation--primary .nav-button:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .cover-navigation--primary .navigation__item.webinar-item {
+      grid-column: 2 / span 2;
+    }
+
+    .cover-navigation--primary .webinar-highlight {
+      color: #ff6b6b;
+      border-color: rgba(255, 255, 255, 0.55);
+      background: rgba(8, 15, 30, 0.28);
+    }
+
+    .cover-navigation--primary .webinar-highlight:hover {
+      background: rgba(255, 80, 80, 0.16);
+      border-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .new-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: #d8bd22;
+      color: #111;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 900px) {
+      .cover-navigation--primary .navigation {
+        grid-template-columns: repeat(2, minmax(130px, 1fr));
+        max-width: 460px;
+      }
+
+      .cover-navigation--primary .navigation__item.webinar-item {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .previous-years-dropdown {
+        top: 12px;
+        right: 12px;
+      }
+
+      .previous-years-dropdown > a {
+        font-size: 12px;
+        padding: 7px 10px;
+      }
+
+      .cover-navigation--primary .navigation {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+        gap: 9px;
+      }
+
+      .cover-navigation--primary .navigation__item.webinar-item {
+        grid-column: auto;
+      }
+
+      .cover-navigation--primary .nav-button {
+        min-height: 38px;
+        font-size: 0.82rem;
+        padding: 8px 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -66,8 +191,7 @@
   <a href="#">Past Workshops ▾</a>
   <ul class="dropdown-menu">
     <li><a href="{{ site.baseurl }}/previous_years/2024/index.html">2024</a></li>
-<!--     <li><a href="{{ site.baseurl }}/previous_years/2023/index.html">2023</a></li> -->
-    <!-- Add more years if needed -->
+    <!-- <li><a href="{{ site.baseurl }}/previous_years/2023/index.html">2023</a></li> -->
   </ul>
 </div>
 
@@ -78,22 +202,28 @@
 </span>
 
 <!-- Header -->
-<!-- <header class="panel-cover {% if site.disable_landing_page %}panel-cover--collapsed{% endif %}"
-  style="background-image: url({{ site.baseurl }}/images/cover.jpg)"> -->
 <header class="panel-cover {% if site.disable_landing_page %}panel-cover--collapsed{% endif %}"
   style="background-image: url('{{ site.baseurl }}/images/neuroai_cover_animation.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
   
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
+
         <a href="{{ site.baseurl }}/">
           <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
         </a>
+
         <hr class="panel-cover__divider">
+
         <p class="panel-cover__description">{{ site.description }}</p>
 
-        <h2 style="color: white; font-size: 18px; margin-top: 10px;">{{ site.date_text | markdownify }}</h2>
-        <h3 style="color: white; font-size: 16px; margin-top: 5px;">{{ site.where | markdownify }}</h3>
+        <h2 style="color: white; font-size: 18px; margin-top: 10px;">
+          {{ site.date_text | markdownify }}
+        </h2>
+
+        <h3 style="color: white; font-size: 16px; margin-top: 5px;">
+          {{ site.where | markdownify }}
+        </h3>
 
         <hr class="panel-cover__divider panel-cover__divider--secondary">
 
@@ -101,15 +231,39 @@
         <div class="navigation-wrapper">
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#overview" class="nav-button">Overview</a></li>
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#organizers" class="nav-button">Organizers</a></li>
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#advisory-board" class="nav-button">Steering Committee</a></li>
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#speakers" class="nav-button">Speakers</a></li>
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#call-for-papers" class="nav-button">Call for Papers</a></li>
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#travel-awards" class="nav-button">Travel Awards</a></li>
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#schedules" class="nav-button">Schedule</a></li>
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#accepted-papers" class="nav-button">Accepted Papers</a></li>
               <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#overview" class="nav-button">Overview</a>
+              </li>
+
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#organizers" class="nav-button">Organizers</a>
+              </li>
+
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#advisory-board" class="nav-button">Steering Committee</a>
+              </li>
+
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#speakers" class="nav-button">Speakers</a>
+              </li>
+
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#call-for-papers" class="nav-button">Call for Papers</a>
+              </li>
+
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#travel-awards" class="nav-button">Travel Awards</a>
+              </li>
+
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#schedules" class="nav-button">Schedule</a>
+              </li>
+
+              <li class="navigation__item">
+                <a href="{{ site.baseurl }}/#accepted-papers" class="nav-button">Accepted Papers</a>
+              </li>
+
+              <li class="navigation__item webinar-item">
                 <a href="{{ site.baseurl }}/#webinar-series" class="nav-button webinar-highlight">
                   Webinar Series <span class="new-badge">UPCOMING</span>
                 </a>
@@ -121,13 +275,13 @@
             <!-- Optional: Add social icons -->
           </nav>
         </div>
+
       </div>
     </div>
+
     <div class="panel-cover--overlay"></div>
   </div>
 </header>
-
-
 
 <footer class="footer">
   <span class="footer__copyright">© 2025. Moein Khajehnejad. All rights reserved.</span>
