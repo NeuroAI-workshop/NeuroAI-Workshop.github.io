@@ -79,26 +79,26 @@ robots: noindex
     }
 
     /*
-      Smooth transition from full landing page to left sidebar layout.
+      Elegant transition from full landing page to left sidebar layout.
     */
     .panel-cover {
       transition:
-        width 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-        max-width 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-        height 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.6s ease,
-        transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+        width 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+        max-width 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+        height 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.85s ease,
+        transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .content-wrapper {
       transition:
-        opacity 0.75s ease,
-        transform 0.75s ease;
+        opacity 1.15s ease,
+        transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     body.homepage-transitioning .content-wrapper {
       opacity: 0;
-      transform: translateY(24px);
+      transform: translateY(22px);
     }
 
     body.homepage-opened .content-wrapper {
@@ -108,7 +108,7 @@ robots: noindex
 
     /*
       Active left-menu button while scrolling.
-      No button is active on the initial landing page.
+      No button is active on the first landing view.
     */
     .nav-button.active-section {
       background: rgba(255, 255, 255, 0.24) !important;
@@ -181,7 +181,7 @@ robots: noindex
       const sections = document.querySelectorAll(".embedded-page-section[data-url]");
 
       /*
-        Make sure no button is active on the first landing view.
+        Make sure no button is active on the initial landing page.
       */
       function clearActiveNav() {
         navLinks.forEach(function (link) {
@@ -212,16 +212,23 @@ robots: noindex
           contentWrapper.classList.add("content-wrapper--show");
           contentWrapper.style.display = "block";
           contentWrapper.style.visibility = "visible";
+          contentWrapper.style.opacity = "0";
+          contentWrapper.style.transform = "translateY(22px)";
         }
 
         /*
-          Small delay allows the fade/slide transition to start before the cover collapses.
+          Start collapsing the landing page into the sidebar.
         */
         setTimeout(function () {
           if (cover) {
             cover.classList.add("panel-cover--collapsed");
           }
+        }, 100);
 
+        /*
+          Fade the content in after the sidebar transition has started.
+        */
+        setTimeout(function () {
           document.body.classList.add("homepage-opened");
           document.body.classList.remove("homepage-transitioning");
 
@@ -229,7 +236,7 @@ robots: noindex
             contentWrapper.style.opacity = "1";
             contentWrapper.style.transform = "translateY(0)";
           }
-        }, 80);
+        }, 420);
       }
 
       function scrollToSection(hash, delay) {
@@ -249,7 +256,11 @@ robots: noindex
 
       /*
         Allow scrolling from the first landing page.
-        When the user scrolls down, the cover smoothly collapses and moves to Overview.
+
+        Important:
+        We do NOT force-scroll to #overview here. That was what made the
+        transition feel sudden. Instead, we smoothly collapse the cover,
+        reveal the content, and let the page settle naturally.
       */
       let landingOpened = false;
 
@@ -263,18 +274,16 @@ robots: noindex
           openHomeContent();
 
           /*
-            Now the Overview button becomes active only after the scroll transition starts.
+            Activate Overview only after the transition has started,
+            not on the first full-screen landing view.
           */
           setTimeout(function () {
             setActiveNav("overview");
-          }, 500);
 
-          /*
-            Delay gives the layout time to transition before scrolling to Overview.
-          */
-          setTimeout(function () {
-            scrollToSection("#overview", 0);
-          }, 850);
+            if (history.replaceState) {
+              history.replaceState(null, null, "#overview");
+            }
+          }, 900);
         }
       }
 
@@ -355,7 +364,7 @@ robots: noindex
 
       /*
         Observe sections and update active left-menu button while scrolling.
-        This only starts affecting buttons after the landing page has opened.
+        This should only activate after the landing page has opened.
       */
       const observerOptions = {
         root: null,
@@ -386,7 +395,7 @@ robots: noindex
 
       /*
         If user lands directly on /#overview, /#speakers, etc.,
-        collapse the cover and show the homepage content.
+        collapse the cover and show the corresponding section.
       */
       if (window.location.hash) {
         landingOpened = true;
@@ -395,7 +404,7 @@ robots: noindex
         const initialId = window.location.hash.replace("#", "");
         setActiveNav(initialId);
 
-        scrollToSection(window.location.hash, 700);
+        scrollToSection(window.location.hash, 750);
       }
 
       /*
@@ -426,7 +435,7 @@ robots: noindex
                 window.location.hash = hash;
               }
 
-              scrollToSection(hash, 650);
+              scrollToSection(hash, 700);
             }
           }
         });
