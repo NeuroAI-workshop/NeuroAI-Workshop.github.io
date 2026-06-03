@@ -9,48 +9,25 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 20px;">
   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Karl Friston.jpg" alt="Karl Friston" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
+    <img src="{{ site.baseurl }}/images/organizers/Joshua Tenenbaum.jpg" alt="Joshua Tenenbaum" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://en.wikipedia.org/wiki/Karl_J._Friston" style="color: blue;">Karl Friston</a>
+        <a href="https://cocosci.mit.edu/josh-tenenbaum/" style="color: blue;">Joshua Tenenbaum</a>
       </strong><br>
-      University College London 
+      MIT
     </div>
   </div>
 
   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/DorisTsao.jpeg" alt="Doris Tsao" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
+    <img src="{{ site.baseurl }}/images/organizers/Ida_Momennejad_photo.jpeg" alt="Ida Momennejad" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://vcresearch.berkeley.edu/faculty/doris-tsao" style="color: blue;">Doris Tsao</a>
+        <a href="https://www.momen-nejad.org/" style="color: blue;">Ida Momennejad</a>
       </strong><br>
-      UC Berkeley
+      Microsoft Research
     </div>
   </div>
 
-<!--
-  <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Max Welling.jpg" alt="Max Welling" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
-    <div style="font-size: 0.9em;">
-      <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://amlab.science.uva.nl/people/MaxWelling/" style="color: blue;">Max Welling</a>
-      </strong><br>
-      CuspAI, University of Amsterdam
-    </div>
-  </div>
--->
-
-
-
-  <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Evelina Fedorenko.jpeg" alt="Evelina Fedorenko" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
-    <div style="font-size: 0.9em;">
-      <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://bcs.mit.edu/directory/evelina-fedorenko" style="color: blue;">Evelina Fedorenko</a>
-      </strong><br>
-      MIT McGovern Institute
-    </div>
-  </div>
 
 
 
@@ -60,38 +37,47 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
       <strong style="font-size: 1.2em; color: blue;">
         <a href="https://findanexpert.unimelb.edu.au/profile/439055-thomas-oxley" style="color: blue;">Tom Oxley</a>
       </strong><br>
-      Synchron, University of Melbourne
+      Synchron
     </div>
   </div>
 
 
-<!--
-  <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Kanaka Rajan.png" alt="/Kanaka Rajan" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
+ <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
+    <img src="{{ site.baseurl }}/images/organizers/Ila Fiete.png" alt="Ila Fiete" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
     <div style="font-size: 0.9em;">
       <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://neuro.hms.harvard.edu/faculty-staff/kanaka-rajan" style="color: blue;">Kanaka Rajanp</a>
+        <a href="https://mcgovern.mit.edu/profile/ila-fiete/" style="color: blue;">Ila Fiete</a>
       </strong><br>
-      Harvard University
+      MIT
     </div>
   </div>
-</div>
--->
+
+
+ <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
+    <img src="{{ site.baseurl }}/images/organizers/Ratan Murty.png" alt="Ratan Murty" style="width: 175px; height: 200px; border-radius: 20%; margin-bottom: 10px;">
+    <div style="font-size: 0.9em;">
+      <strong style="font-size: 1.2em; color: blue;">
+        <a href="https://www.murtylab.com/" style="color: blue;">Ratan Murty</a>
+      </strong><br>
+      Georgia Tech
+    </div>
+  </div>
 
 </div>
 
 ## Talk Titles
 
-- **Karl Friston:** “---”
-- **Doris Tsao:** “Representing the visual world ”
-- **Evelina Federenko:** “Language and thought in brains and machines”
-- **Tom Oxley:** “Towards abstracting mechanisms underlying cognitions directly from scalable neural recordings”
+- **Joshua Tenenbaum:** “TBA”
+- **Ida Momennejad:** “The Compositional Geometry of Reasoning in Brains and AI”
+- **Tom Oxley:** “First-look: Foundation models of human motor control through scalable intracranial BCIs”
+- **Ila Fiete:** “Structured memory for efficient generalization, transfer, and robustness to catastrophic forgetting in the brain”
+- **Ratan Murty:** “In-silico replications and hypothesis testing for model benchmarking”
 
 
 
 ## Panelists: 
 
-<p><strong>Watch this space. Planning for another exciting panel discussion is underway </strong><span class="dots"></span></p>
+<p><strong>Watch this space. Planning for another exciting panel discussion on **NeuroAI Transfer, Robustness, and Alignment**, moderated by **Patrick Mineault** is underway </strong><span class="dots"></span></p>
 
 <style>
 @keyframes blink {
@@ -106,30 +92,3 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
 </style>
 
 
-<!--  
-#### **Highlight:** Our workshop will feature an in-person panel discussion between the two pioneers in AI and Neuroscience: Yoshua Bengio and Karl Friston ####
-
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 20px;">
-  <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Karl Friston2.jpg" alt="Karl Friston" style="width: 175px; height: 220px; border-radius: 20%; margin-bottom: 10px;">
-    <div style="font-size: 0.9em;">
-      <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://en.wikipedia.org/wiki/Karl_J._Friston" style="color: blue;">Karl Friston</a>
-      </strong><br>
-      University College London
-    </div>
-  </div>
-
-
-
-   <div style="flex: 1 1 calc(33.33% - 20px); box-sizing: border-box; text-align: center; margin-bottom: 20px;">
-    <img src="{{ site.baseurl }}/images/organizers/Yoshua Bengio.jpeg" alt="Yoshua Bengio" style="width: 175px; height: 220px; border-radius: 20%; margin-bottom: 10px;">
-    <div style="font-size: 0.9em;">
-      <strong style="font-size: 1.2em; color: blue;">
-        <a href="https://yoshuabengio.org/" style="color: blue;">Yoshua Bengio</a>
-      </strong><br>
-      MILA
-    </div>
-  </div>
-</div>
--->
