@@ -79,7 +79,7 @@ robots: noindex
     }
 
     /*
-      Elegant transition from full landing page to left sidebar layout.
+      Elegant transition between full landing page and left sidebar layout.
     */
     .panel-cover {
       transition:
@@ -104,6 +104,11 @@ robots: noindex
     body.homepage-opened .content-wrapper {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    body.homepage-closing .content-wrapper {
+      opacity: 0;
+      transform: translateY(22px);
     }
 
     /*
@@ -181,7 +186,7 @@ robots: noindex
       const sections = document.querySelectorAll(".embedded-page-section[data-url]");
 
       /*
-        Make sure no button is active on the initial landing page.
+        No button should be active on the first landing page.
       */
       function clearActiveNav() {
         navLinks.forEach(function (link) {
@@ -202,10 +207,14 @@ robots: noindex
 
       clearActiveNav();
 
+      /*
+        Open from full landing page into sidebar/content layout.
+      */
       function openHomeContent() {
         const cover = document.querySelector(".panel-cover");
         const contentWrapper = document.querySelector(".content-wrapper");
 
+        document.body.classList.remove("homepage-closing");
         document.body.classList.add("homepage-transitioning");
 
         if (contentWrapper) {
@@ -216,18 +225,12 @@ robots: noindex
           contentWrapper.style.transform = "translateY(22px)";
         }
 
-        /*
-          Start collapsing the landing page into the sidebar.
-        */
         setTimeout(function () {
           if (cover) {
             cover.classList.add("panel-cover--collapsed");
           }
         }, 100);
 
-        /*
-          Fade the content in after the sidebar transition has started.
-        */
         setTimeout(function () {
           document.body.classList.add("homepage-opened");
           document.body.classList.remove("homepage-transitioning");
@@ -237,6 +240,51 @@ robots: noindex
             contentWrapper.style.transform = "translateY(0)";
           }
         }, 420);
+      }
+
+      /*
+        Close back from sidebar/content layout to full landing page.
+      */
+      function closeHomeContent() {
+        const cover = document.querySelector(".panel-cover");
+        const contentWrapper = document.querySelector(".content-wrapper");
+
+        document.body.classList.add("homepage-closing");
+        document.body.classList.remove("homepage-opened");
+        document.body.classList.remove("homepage-transitioning");
+
+        clearActiveNav();
+
+        if (history.replaceState) {
+          history.replaceState(null, null, window.location.pathname);
+        }
+
+        if (contentWrapper) {
+          contentWrapper.style.opacity = "0";
+          contentWrapper.style.transform = "translateY(22px)";
+        }
+
+        setTimeout(function () {
+          if (cover) {
+            cover.classList.remove("panel-cover--collapsed");
+          }
+        }, 80);
+
+        setTimeout(function () {
+          if (contentWrapper) {
+            contentWrapper.classList.remove("content-wrapper--show");
+            contentWrapper.style.display = "";
+            contentWrapper.style.visibility = "";
+            contentWrapper.style.opacity = "";
+            contentWrapper.style.transform = "";
+          }
+
+          document.body.classList.remove("homepage-closing");
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        }, 900);
       }
 
       function scrollToSection(hash, delay) {
@@ -255,17 +303,22 @@ robots: noindex
       }
 
       /*
-        Allow scrolling from the first landing page.
-
-        Important:
-        We do NOT force-scroll to #overview here. That was what made the
-        transition feel sudden. Instead, we smoothly collapse the cover,
-        reveal the content, and let the page settle naturally.
+        Track whether the landing page has opened.
       */
       let landingOpened = false;
+      let landingIsClosing = false;
+
+      function isNearTopOfOverview() {
+        const overview = document.querySelector("#overview");
+        if (!overview) return window.scrollY <= 30;
+
+        const rect = overview.getBoundingClientRect();
+
+        return window.scrollY <= 40 || rect.top >= -20;
+      }
 
       function openLandingOnScroll() {
-        if (landingOpened) return;
+        if (landingOpened || landingIsClosing) return;
 
         const cover = document.querySelector(".panel-cover");
 
@@ -274,8 +327,7 @@ robots: noindex
           openHomeContent();
 
           /*
-            Activate Overview only after the transition has started,
-            not on the first full-screen landing view.
+            Activate Overview only after the transition has started.
           */
           setTimeout(function () {
             setActiveNav("overview");
@@ -287,17 +339,68 @@ robots: noindex
         }
       }
 
+      function closeLandingOnScrollUp() {
+        if (!landingOpened || landingIsClosing) return;
+        if (!isNearTopOfOverview()) return;
+
+        landingIsClosing = true;
+        closeHomeContent();
+
+        setTimeout(function () {
+          landingOpened = false;
+          landingIsClosing = false;
+          clearActiveNav();
+        }, 1000);
+      }
+
+      /*
+        Wheel behavior:
+        - Scroll down on first page opens content.
+        - Scroll up at the top of Overview returns to first page.
+      */
       window.addEventListener("wheel", function (event) {
         if (event.deltaY > 0 && !landingOpened) {
           event.preventDefault();
           openLandingOnScroll();
         }
+
+        if (event.deltaY < 0 && landingOpened && isNearTopOfOverview()) {
+          event.preventDefault();
+          closeLandingOnScrollUp();
+        }
       }, { passive: false });
 
-      window.addEventListener("touchmove", function () {
-        openLandingOnScroll();
+      /*
+        Touch behavior for mobile.
+      */
+      let touchStartY = null;
+
+      window.addEventListener("touchstart", function (event) {
+        if (event.touches && event.touches.length > 0) {
+          touchStartY = event.touches[0].clientY;
+        }
       }, { passive: true });
 
+      window.addEventListener("touchmove", function (event) {
+        if (!touchStartY || !event.touches || event.touches.length === 0) return;
+
+        const touchCurrentY = event.touches[0].clientY;
+        const deltaY = touchStartY - touchCurrentY;
+
+        if (deltaY > 20 && !landingOpened) {
+          openLandingOnScroll();
+        }
+
+        if (deltaY < -20 && landingOpened && isNearTopOfOverview()) {
+          closeLandingOnScrollUp();
+        }
+      }, { passive: true });
+
+      /*
+        Keyboard behavior:
+        - Down/PageDown/Space opens content.
+        - Up/PageUp/Home at top of Overview returns to landing page.
+      */
       window.addEventListener("keydown", function (event) {
         if (
           event.key === "ArrowDown" ||
@@ -307,10 +410,21 @@ robots: noindex
         ) {
           openLandingOnScroll();
         }
+
+        if (
+          event.key === "ArrowUp" ||
+          event.key === "PageUp" ||
+          event.key === "Home"
+        ) {
+          if (landingOpened && isNearTopOfOverview()) {
+            event.preventDefault();
+            closeLandingOnScrollUp();
+          }
+        }
       });
 
       /*
-        Load the standalone markdown-rendered pages into the homepage sections.
+        Load the standalone markdown-rendered pages into homepage sections.
       */
       sections.forEach(function (section) {
         const url = section.getAttribute("data-url");
@@ -424,6 +538,7 @@ robots: noindex
               event.preventDefault();
 
               landingOpened = true;
+              landingIsClosing = false;
               openHomeContent();
 
               const sectionId = hash.replace("#", "");
