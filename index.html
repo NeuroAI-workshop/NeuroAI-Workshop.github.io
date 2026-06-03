@@ -331,6 +331,36 @@ robots: noindex
       let landingOpened = false;
       let landingIsClosing = false;
 
+      /*
+        New intentional-scroll settings:
+        Returning from Overview to the landing page now needs a bit more upward scrolling.
+      */
+      let upwardScrollAccumulator = 0;
+      let upwardScrollResetTimer = null;
+      const upwardScrollThreshold = 120;
+
+      function resetUpwardScrollAccumulator() {
+        upwardScrollAccumulator = 0;
+        if (upwardScrollResetTimer) {
+          clearTimeout(upwardScrollResetTimer);
+          upwardScrollResetTimer = null;
+        }
+      }
+
+      function addUpwardScrollAmount(amount) {
+        upwardScrollAccumulator += Math.abs(amount);
+
+        if (upwardScrollResetTimer) {
+          clearTimeout(upwardScrollResetTimer);
+        }
+
+        upwardScrollResetTimer = setTimeout(function () {
+          upwardScrollAccumulator = 0;
+        }, 450);
+
+        return upwardScrollAccumulator >= upwardScrollThreshold;
+      }
+
       function isNearTopOfOverview() {
         const overview = document.querySelector("#overview");
         if (!overview) return window.scrollY <= 30;
@@ -351,6 +381,7 @@ robots: noindex
 
         if (cover && !cover.classList.contains("panel-cover--collapsed")) {
           landingOpened = true;
+          resetUpwardScrollAccumulator();
           openHomeContent();
 
           setTimeout(function () {
@@ -372,6 +403,7 @@ robots: noindex
         if (!isNearTopOfOverview()) return;
 
         landingIsClosing = true;
+        resetUpwardScrollAccumulator();
         closeHomeContent();
 
         setTimeout(function () {
@@ -384,7 +416,8 @@ robots: noindex
       /*
         Wheel behavior:
         - Scroll down on first page opens Overview with soft transition.
-        - Scroll up at the top of Overview returns to first page with soft transition.
+        - Scroll up at the top of Overview returns to first page only after
+          a slightly more intentional upward scroll.
       */
       window.addEventListener("wheel", function (event) {
         if (event.deltaY > 0 && !landingOpened) {
@@ -394,7 +427,14 @@ robots: noindex
 
         if (event.deltaY < 0 && landingOpened && isNearTopOfOverview()) {
           event.preventDefault();
-          closeLandingOnScrollUp();
+
+          if (addUpwardScrollAmount(event.deltaY)) {
+            closeLandingOnScrollUp();
+          }
+        }
+
+        if (event.deltaY > 0) {
+          resetUpwardScrollAccumulator();
         }
       }, { passive: false });
 
@@ -420,7 +460,13 @@ robots: noindex
         }
 
         if (deltaY < -20 && landingOpened && isNearTopOfOverview()) {
-          closeLandingOnScrollUp();
+          if (addUpwardScrollAmount(deltaY)) {
+            closeLandingOnScrollUp();
+          }
+        }
+
+        if (deltaY > 20) {
+          resetUpwardScrollAccumulator();
         }
       }, { passive: true });
 
@@ -434,6 +480,7 @@ robots: noindex
           event.key === " " ||
           event.key === "Spacebar"
         ) {
+          resetUpwardScrollAccumulator();
           openLandingOnScroll();
         }
 
@@ -444,6 +491,10 @@ robots: noindex
         ) {
           if (landingOpened && isNearTopOfOverview()) {
             event.preventDefault();
+
+            /*
+              Keyboard is already intentional, so close directly.
+            */
             closeLandingOnScrollUp();
           }
         }
@@ -561,6 +612,7 @@ robots: noindex
 
               landingOpened = true;
               landingIsClosing = false;
+              resetUpwardScrollAccumulator();
 
               setActiveNav(sectionId);
 
