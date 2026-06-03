@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Advisory Board"
+title: "Steering Committee"
 permalink: /advisory-board/
 ---
 
