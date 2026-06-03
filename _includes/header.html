@@ -71,9 +71,9 @@
 
     .cover-navigation--primary .navigation {
       display: grid;
-      grid-template-columns: repeat(4, minmax(135px, 1fr));
-      gap: 11px 13px;
-      max-width: 760px;
+      grid-template-columns: repeat(4, minmax(170px, 1fr));
+      gap: 12px 16px;
+      max-width: 900px;
       width: 100%;
       padding: 0;
       margin: 0 auto;
@@ -92,16 +92,16 @@
       justify-content: center;
       min-height: 42px;
       width: 100%;
-      padding: 9px 16px;
+      padding: 9px 18px;
       border: 1px solid rgba(255, 255, 255, 0.55);
       border-radius: 999px;
       background: rgba(8, 15, 30, 0.22);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       color: #ffffff;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 650;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.035em;
       text-align: center;
       text-decoration: none;
       white-space: nowrap;
@@ -144,10 +144,10 @@
       vertical-align: middle;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .cover-navigation--primary .navigation {
-        grid-template-columns: repeat(2, minmax(130px, 1fr));
-        max-width: 460px;
+        grid-template-columns: repeat(2, minmax(170px, 1fr));
+        max-width: 540px;
       }
 
       .cover-navigation--primary .navigation__item.webinar-item {
@@ -186,7 +186,7 @@
 </head>
 <body>
 
-<!-- Past Workshops Dropdown (ALWAYS visible) -->
+<!-- Past Workshops Dropdown -->
 <div class="previous-years-dropdown">
   <a href="#">Past Workshops ▾</a>
   <ul class="dropdown-menu">
