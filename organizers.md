@@ -166,7 +166,7 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
       <strong>
         <a href="https://www.meganakpeters.org/">Megan A. K. Peters</a>
       </strong><br>
-      University of California, Irvine; University College London; Neuromatch
+      University College London; Neuromatch
     </div>
   </div>
 
