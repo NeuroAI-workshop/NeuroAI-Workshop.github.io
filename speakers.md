@@ -174,6 +174,16 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
     </div>
   </div>
 
+  <div class="speaker-card">
+    <img src="{{ site.baseurl }}/images/organizers/Adrienne Fairhall.png" alt="Adrienne Fairhall">
+    <div class="speaker-info">
+      <strong>
+        <a href="https://fairhalllab.com/people/">Adrienne Fairhall</a>
+      </strong><br>
+      University of Washington
+    </div>
+  </div>
+
 </div>
 
 ## Talk Titles
@@ -183,6 +193,7 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
 - **Tom Oxley:** “First-look: Foundation models of human motor control through scalable intracranial BCIs”
 - **Ila Fiete:** “Structured memory for efficient generalization, transfer, and robustness to catastrophic forgetting in the brain”
 - **Ratan Murty:** “In-silico replications and hypothesis testing for model benchmarking”
+- **Adrienne Fairhall:** "TBA"
 
 ## Panelists
 
