@@ -43,7 +43,7 @@
 # plugins: ['jekyll-paginate']
 # exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
 
-title: "2nd NeuroAI Workshop @ NeurIPS:<br>NeuroAI in the Loop "
+title: "2nd NeuroAI Workshop @ NeurIPS:<br>Closed-Loop NeuroAI"
 date_text: "<span style='color: white;'>December, 2026</span>"
 where: "<span style='color: white;'>NeurIPS2026, Sydney, Australia</span>"
 description: "<span style='font-size: 2em; font-weight: 500;'>Scalable Biological Priors for Adaptive Intelligence</span>"
