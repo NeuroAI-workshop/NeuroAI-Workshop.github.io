@@ -6,7 +6,7 @@ permalink: /overview/
 
 <!-- # Overview -->
 
-Welcome to the NeurIPS 2026 Workshop **NeuroAI in the Loop: Scalable Biological Priors for Adaptive Intelligence**! Building on the success of our inaugural event, this second NeuroAI workshop will take place at NeurIPS 2026 in Sydney and will continue to bring together researchers and practitioners from neuroscience, artificial intelligence, cognitive science, neurotechnology, and related fields.
+Welcome to the NeurIPS 2026 Workshop **Closed-Loop NeuroAI: Scalable Biological Priors for Adaptive Intelligence**! Building on the success of our inaugural event, this second NeuroAI workshop will take place at NeurIPS 2026 in Sydney and will continue to bring together researchers and practitioners from neuroscience, artificial intelligence, cognitive science, neurotechnology, and related fields.
 
 We are in a period of rapid progress in artificial intelligence, marked by the rise of large-scale models in language, vision, multimodal learning, generative modeling, and autonomous agents. As these systems scale, there is growing interest in understanding which principles of biological intelligence can help AI systems become more robust, efficient, adaptive, interpretable, and aligned with real-world constraints. The field of NeuroAI -- at the intersection of artificial and natural intelligence -- aims to bridge neuroscience and AI by translating insights from brains, bodies, and behavior into computational principles for modern machine learning.
 
