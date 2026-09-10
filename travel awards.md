@@ -25,6 +25,4 @@ For 2026, available sponsorship funds will primarily support **travel and regist
 
 We also plan to offer smaller-scale **paper and reviewer awards**, including conference registration awards for the top three student-authored papers and top three high-quality reviewers, as selected by the senior area chairs.
 
-Based on strong interest from last year, we also plan to publish workshop __proceedings__ this year. 
-
 We strongly encourage early-career researchers and students to submit their work to this workshop.
