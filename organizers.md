@@ -141,7 +141,7 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
   </div>
 
   <div class="organizer-card">
-    <img src="{{ site.baseurl }}/images/organizers/hon.jpg" alt="Hon Weng Chong">
+    <img src="{{ site.baseurl }}/images/organizers/Hon.jpg" alt="Hon Weng Chong">
     <div class="organizer-info">
       <strong>
         <a href="https://x.com/dr1337">Hon Weng Chong</a>
