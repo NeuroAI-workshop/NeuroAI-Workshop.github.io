@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Travel Awards"
+title: "Sponsors and Awards"
 permalink: /travel-awards/
 ---
 
