@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Call for Papers"
+title: "Call for Submissions"
 permalink: /call-for-papers/
 ---
 
@@ -8,7 +8,7 @@ permalink: /call-for-papers/
 
 We invite researchers in the field of NeuroAI to submit their papers to this workshop. The workshop papers are non-archival and authors are also encouraged to submit short versions of their NeurIPS main conference submissions concurrently to this workshop.
 
-Submissions should adhere to a page limit of 5 pages, excluding references and supplementary materials, and must use the [NeurIPS 2026 LaTeX template](/resource/neurips-2026-template.zip). All submissions must be anonymized and may not contain any identifying information that may violate the **double-blind** reviewing policy.
+Submissions will in the form of extended abstracts and should adhere to a page limit of 2 pages, excluding references and supplementary materials, and must use the [NeurIPS 2026 LaTeX template](/resource/neurips-2026-template.zip). All submissions must be anonymized and may not contain any identifying information that may violate the **double-blind** reviewing policy.
 
 Topics of interest include, but are not limited to:
 
@@ -25,9 +25,9 @@ We strongly discourage the presentation of already completed and/or published ma
 
 Please note submissions that solely explore ML/AI algorithms without an explicit link to neuroscience are out of scope.
 
-**Submission Deadline:** <span style="color: red;"> 23:59 August 29, 2026 (AoE)</span>
+**Submission Deadline:** <span style="color: red;"> TBA (AoE)</span>
 
-**Notification of Acceptance:** September 29, 2026
+**Notification of Acceptance:** TBA
 
 The top 3 highly scored submissions will be chosen for spotlight talks.
 
