@@ -128,7 +128,7 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
       <strong>
         <a href="https://foroughha.github.io/">Forough Habibollahi</a>
       </strong><br>
-      Cortical Labs
+      Tether Evo
     </div>
   </div>
 
@@ -141,12 +141,12 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
   </div>
 
   <div class="organizer-card">
-    <img src="{{ site.baseurl }}/images/organizers/sueyeon.jpg" alt="SueYeon Chung">
+    <img src="{{ site.baseurl }}/images/organizers/hon.jpg" alt="Hon Weng Chong">
     <div class="organizer-info">
       <strong>
-        <a href="https://sites.google.com/site/sueyeonchung/">SueYeon Chung</a>
+        <a href="https://x.com/dr1337">Hon Weng Chong</a>
       </strong><br>
-      Kempner Institute, Harvard University
+      Founder of Cortical Labs and CliniCloud
     </div>
   </div>
 
