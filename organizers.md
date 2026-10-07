@@ -140,33 +140,15 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
     </div>
   </div>
 
-  <div class="organizer-card">
-    <img src="{{ site.baseurl }}/images/organizers/Hon.jpeg" alt="Hon Weng Chong">
-    <div class="organizer-info">
-      <strong>
-        <a href="https://x.com/dr1337">Hon Weng Chong</a>
-      </strong><br>
-      Founder of Cortical Labs and CliniCloud
-    </div>
   </div>
 
   <div class="organizer-card">
-    <img src="{{ site.baseurl }}/images/organizers/asim iqbal.jpg" alt="Asim Iqbal">
+    <img src="{{ site.baseurl }}/images/organizers/sueyeon.jpg" alt="SueYeon Chung">
     <div class="organizer-info">
       <strong>
-        <a href="https://www.tibbtech.com/team/asim/">Asim Iqbal</a>
+        <a href="https://www.physics.harvard.edu/people/facpages/chung">SueYeon Chung</a>
       </strong><br>
-      Tibbling Technologies; Weill Cornell Medicine
-    </div>
-  </div>
-
-  <div class="organizer-card">
-    <img src="{{ site.baseurl }}/images/organizers/Megan Peters.jpeg" alt="Megan A. K. Peters">
-    <div class="organizer-info">
-      <strong>
-        <a href="https://www.meganakpeters.org/">Megan A. K. Peters</a>
-      </strong><br>
-      University College London; Neuromatch
+      Harvard University
     </div>
   </div>
 
