@@ -21,7 +21,7 @@ The top 3  highly scored submissions will be chosen for spotlight talks.
 -->
 Travel awards and student support will be announced soon—sponsorships are finalized and exciting updates are on the way!
 
-For 2026, available sponsorship funds will primarily support **travel and registration awards for under-resourced and underrepresented students**, administered through a public application process. Please apply using the [Travel award application form](https://docs.google.com/forms/d/e/1FAIpQLSeB68LhJSBYTOR_cXimqIRY0Fqdtam6egNHKpIEVfahfD4JjQ/viewform?pli=1).
+For 2027, available sponsorship funds will primarily support **travel and registration awards for under-resourced and underrepresented students**, administered through a public application process. Please apply using the [Travel award application form](https://docs.google.com/forms/d/e/1FAIpQLSeB68LhJSBYTOR_cXimqIRY0Fqdtam6egNHKpIEVfahfD4JjQ/viewform?pli=1).
 
 We also plan to offer smaller-scale **paper and reviewer awards**, including conference registration awards for the top three student-authored papers and top three high-quality reviewers, as selected by the senior area chairs.
 
