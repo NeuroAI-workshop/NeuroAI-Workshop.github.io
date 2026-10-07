@@ -6,10 +6,13 @@ permalink: /call-for-papers/
 
 <!-- # Call for Papers -->
 
-We invite researchers in the field of NeuroAI to submit their papers to this workshop. The workshop papers are non-archival and authors are also encouraged to submit short versions of their NeurIPS main conference submissions concurrently to this workshop.
+We invite researchers in the field of NeuroAI to submit their papers to this workshop. The workshop papers are non-archival and authors are also encouraged to submit short versions of their ICLR main conference submissions concurrently to this workshop. 
 
-Submissions will in the form of extended abstracts and should adhere to a page limit of 2 pages, excluding references and supplementary materials, and must use the [NeurIPS 2026 LaTeX template](/resource/neurips-2026-template.zip). All submissions must be anonymized and may not contain any identifying information that may violate the **double-blind** reviewing policy.
+Submissions will be managed through OpenReview and offered in two formats: **Regular Papers** of up to **5 pages** and **Tiny Papers** of up to **2 pages**, excluding references and supplementary material. Submissions should use the [LaTeX template]\(/resource/neurips-2026-template.zip), must be anonymized, and must comply with the **double-blind** reviewing policy. We particularly welcome novel, ongoing, or discussion-generating work.
 
+Consistent with the ICLR 2027 Tiny/Short Paper requirements, **AI-generated papers will not be accepted in the Tiny Paper track**. AI assistance is permitted, but submissions must remain primarily human-authored and reflect the authors' original scientific thought and analysis. Submissions that do not satisfy this policy may be desk-rejected.
+
+Conflicts of interest will be handled through OpenReview, with conflicted submissions assigned to non-conflicted senior area chairs and reviewers.
 Topics of interest include, but are not limited to:
 
 - **Priors that scale: inductive biases from brains that improve modern learning**
@@ -25,9 +28,9 @@ We strongly discourage the presentation of already completed and/or published ma
 
 Please note submissions that solely explore ML/AI algorithms without an explicit link to neuroscience are out of scope.
 
-**Submission Deadline:** <span style="color: red;"> TBA (AoE)</span>
+**Submission Deadline:** <span style="color: red;"> 1 February 2027 </span>
 
-**Notification of Acceptance:** TBA
+**Notification of Acceptance:** 26 February 2027
 
 The top 3 highly scored submissions will be chosen for spotlight talks.
 
