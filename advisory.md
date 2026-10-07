@@ -133,6 +133,7 @@ We are grateful to our steering committee members for their guidance and support
     </div>
   </div>
 
+<!--
   <div class="steering-card">
     <img src="{{ site.baseurl }}/images/organizers/Anthony Zador.png" alt="Anthony Zador">
     <div class="steering-info">
@@ -142,6 +143,7 @@ We are grateful to our steering committee members for their guidance and support
       Cold Spring Harbor Laboratory
     </div>
   </div>
+-->
 
   <div class="steering-card">
     <img src="{{ site.baseurl }}/images/organizers/Maryam Shanechi.jpg" alt="Maryam Shanechi">
