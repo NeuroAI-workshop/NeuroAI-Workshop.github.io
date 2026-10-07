@@ -44,8 +44,8 @@
 # exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
 
 title: "2nd NeuroAI Workshop:<br>Closed-Loop NeuroAI"
-date_text: "<span style='color: white;'>An independent workshop alongside NeurIPS 2026, December, 2026</span>"
-where: "<span style='color: white;'>Sydney, Australia</span>"
+date_text: "<span style='color: white;'>ICLR 2027</span>"
+where: "<span style='color: white;'>San Fransisco, Australia</span>"
 description: "<span style='font-size: 2em; font-weight: 500;'>Scalable Biological Priors for Adaptive Intelligence</span>"
 url: "https://neuroai-workshop.github.io/"
 baseurl: "" # the subpath of your site, e.g. /blog
