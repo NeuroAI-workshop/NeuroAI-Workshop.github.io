@@ -145,22 +145,23 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
   </div>
 
   <div class="speaker-card">
+    <img src="{{ site.baseurl }}/images/organizers/Nicola Toschi.jpg" alt="Nicola Toschi">
+    <div class="speaker-info">
+      <strong>
+        <a href="https://fismed.uniroma2.it/people/nicola-toschi/">Nicola Toschi</a>
+      </strong><br>
+     The University of Rome Tor Vergata
+    </div>
+  </div>
+
+<!--
+  <div class="speaker-card">
     <img src="{{ site.baseurl }}/images/organizers/tom oxley.avif" alt="Tom Oxley">
     <div class="speaker-info">
       <strong>
         <a href="https://findanexpert.unimelb.edu.au/profile/439055-thomas-oxley">Tom Oxley</a>
       </strong><br>
       Synchron
-    </div>
-  </div>
-
-  <div class="speaker-card">
-    <img src="{{ site.baseurl }}/images/organizers/Ila Fiete.png" alt="Ila Fiete">
-    <div class="speaker-info">
-      <strong>
-        <a href="https://mcgovern.mit.edu/profile/ila-fiete/">Ila Fiete</a>
-      </strong><br>
-      MIT
     </div>
   </div>
 
@@ -183,6 +184,7 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
       University of Washington
     </div>
   </div>
+-->
 
 </div>
 
@@ -190,10 +192,8 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
 
 - **Joshua Tenenbaum:** “TBA”
 - **Ida Momennejad:** “The Compositional Geometry of Reasoning in Brains and AI”
-- **Tom Oxley:** “First-look: Foundation models of human motor control through scalable intracranial BCIs”
-- **Ila Fiete:** “Structured memory for efficient generalization, transfer, and robustness to catastrophic forgetting in the brain”
-- **Ratan Murty:** “In-silico replications and hypothesis testing for model benchmarking”
-- **Adrienne Fairhall:** "TBA"
+- **Nicola Toschi:** “TBA”
+
 
 ## Panelists
 
