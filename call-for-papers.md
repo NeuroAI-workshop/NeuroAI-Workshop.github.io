@@ -24,7 +24,7 @@ Topics of interest include, but are not limited to:
 
 The topics above are NOT exhaustive, and we encourage the submission of research related to how principles and insights from neuroscience can lead to better artificial intelligence and vice versa. Our aim is to foster groundbreaking interdisciplinary research that advances both fields.
 
-We strongly discourage the presentation of already completed and/or published machine learning work, including work published in previous NeurIPS main-track conferences, as our focus is on showcasing innovative and ongoing research. Submissions identified as already completed or previously published work will be desk rejected.
+We strongly discourage the presentation of already completed and/or published machine learning work, including work published in previous ICLR main-track conferences, as our focus is on showcasing innovative and ongoing research. Submissions identified as already completed or previously published work will be desk rejected.
 
 Please note submissions that solely explore ML/AI algorithms without an explicit link to neuroscience are out of scope.
 
