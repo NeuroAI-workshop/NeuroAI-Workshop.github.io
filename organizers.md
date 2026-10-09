@@ -16,8 +16,8 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
   }
 
   .organizer-card {
-    flex: 1 1 calc(33.33% - 30px);
-    max-width: 260px;
+    flex: 1 1 calc(50% - 26px);
+    max-width: 320px;
     box-sizing: border-box;
     text-align: center;
   }
@@ -41,40 +41,26 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
     line-height: 1.25;
   }
 
-  /* .organizer-info strong {
+  .organizer-info strong {
     font-size: 1.2em;
-    color: blue;
+    color: #1f3a5f;
+    font-weight: 700;
   }
 
   .organizer-info a {
-    color: blue;
+    color: #1f3a5f;
     text-decoration: none;
   }
 
   .organizer-info a:hover {
+    color: #2f6f9f;
     text-decoration: underline;
-  } */
-
-  .organizer-info strong {
-  font-size: 1.2em;
-  color: #1f3a5f;
-  font-weight: 700;
-}
-
-.organizer-info a {
-  color: #1f3a5f;
-  text-decoration: none;
-}
-
-.organizer-info a:hover {
-  color: #2f6f9f;
-  text-decoration: underline;
-}
+  }
 
   @media (max-width: 900px) {
     .organizer-card {
       flex: 1 1 calc(50% - 24px);
-      max-width: 240px;
+      max-width: 280px;
     }
 
     .organizer-card img {
@@ -138,8 +124,6 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
       <strong>Matteo Ferrante</strong><br>
       Tether Evo
     </div>
-  </div>
-
   </div>
 
   <div class="organizer-card">
