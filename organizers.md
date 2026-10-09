@@ -104,7 +104,7 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
       <strong>
         <a href="https://moein-khajehnejad.github.io/">Moein Khajehnejad</a>
       </strong><br>
-      Monash University; Tether Evo
+      Monash University
     </div>
   </div>
 
