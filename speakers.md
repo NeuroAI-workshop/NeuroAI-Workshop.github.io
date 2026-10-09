@@ -154,6 +154,21 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
     </div>
   </div>
 
+<p><strong>Watch this space for updates on the rest of our exciting speaker lineup</strong><span class="dots"></span></p>
+
+<style>
+@keyframes blink {
+  0% { opacity: 0; }
+  33% { opacity: 1; }
+  66% { opacity: 0; }
+}
+.dots::after {
+  content: ' ...';
+  animation: blink 1s infinite steps(1, start);
+}
+</style>
+  
+
 <!--
   <div class="speaker-card">
     <img src="{{ site.baseurl }}/images/organizers/tom oxley.avif" alt="Tom Oxley">
