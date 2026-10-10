@@ -154,6 +154,26 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
     </div>
   </div>
 
+    <div class="speaker-card">
+    <img src="{{ site.baseurl }}/images/organizers/tom oxley.avif" alt="Tom Oxley">
+    <div class="speaker-info">
+      <strong>
+        <a href="https://findanexpert.unimelb.edu.au/profile/439055-thomas-oxley">Tom Oxley</a>
+      </strong><br>
+      Synchron
+    </div>
+  </div>
+
+    <div class="speaker-card">
+    <img src="{{ site.baseurl }}/images/organizers/Mariya Toneva.jpeg" alt="Mariya Toneva">
+    <div class="speaker-info">
+      <strong>
+        <a href="https://mtoneva.com/">Mariya Toneva</a>
+      </strong><br>
+      Max Planck Institute for Software Systems
+    </div>
+  </div>
+
 <p><strong>Watch this space for updates on the rest of our exciting speaker lineup</strong><span class="dots"></span></p>
 
 <style>
@@ -170,15 +190,7 @@ Meet the speakers who will be presenting at the NeuroAI Workshop. We have a dive
   
 
 <!--
-  <div class="speaker-card">
-    <img src="{{ site.baseurl }}/images/organizers/tom oxley.avif" alt="Tom Oxley">
-    <div class="speaker-info">
-      <strong>
-        <a href="https://findanexpert.unimelb.edu.au/profile/439055-thomas-oxley">Tom Oxley</a>
-      </strong><br>
-      Synchron
-    </div>
-  </div>
+
 
   <div class="speaker-card">
     <img src="{{ site.baseurl }}/images/organizers/Ratan Murty.jpg" alt="Ratan Murty">
