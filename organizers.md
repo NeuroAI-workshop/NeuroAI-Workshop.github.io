@@ -122,7 +122,7 @@ The NeuroAI Workshop is organized by a team of dedicated professionals from the 
     <img src="{{ site.baseurl }}/images/organizers/Matteo.PNG" alt="Matteo Ferrante">
     <div class="organizer-info">
       <strong>Matteo Ferrante</strong><br>
-      University of Rome Tor Vergata
+      Tether Evo
     </div>
   </div>
 
